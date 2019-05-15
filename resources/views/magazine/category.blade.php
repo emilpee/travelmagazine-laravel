@@ -12,7 +12,7 @@
         
  category_id	name	img_url	text
 
-        @csrf          
+        @csrf         
         @endforeach
     </ul> --}}
     
