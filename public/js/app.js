@@ -37110,23 +37110,21 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("header", [
-      _c("nav", [
-        _vm._v("\n    asdiuh\n        "),
-        _c("a", { attrs: { href: "/" } }, [_vm._v("Start")]),
+  return _c("header", [
+    _c(
+      "nav",
+      [
+        _c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")]),
         _vm._v(" "),
-        _c("a", { attrs: { href: "" } }, [_vm._v("Categories")])
-      ])
-    ])
-  }
-]
+        _c("router-link", { attrs: { to: "/categories" } }, [
+          _vm._v("Categories")
+        ])
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -52200,8 +52198,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\TravelMagazine\travelmagazine-laravel\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\TravelMagazine\travelmagazine-laravel\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\Travelmagazine\travelmagazine-laravel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\Travelmagazine\travelmagazine-laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
