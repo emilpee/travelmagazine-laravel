@@ -88,6 +88,19 @@
                     <example-component :title="'This cool app'"></example-component>
                 </div>
 
+                <div>
+                @foreach ($articles as $article)
+                    @csrf
+
+                    <h1>{{ $article->title }}</h1>
+                    <h2>{{ $article->lead }}</h2>
+                    <p>{{ $article->bodytext }}</p>
+
+                @endforeach
+                </div>
+
+
+
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
