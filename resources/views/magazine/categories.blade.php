@@ -1,20 +1,14 @@
-@extend ('magazine.layout');
+@extends ('magazine.layout')
 
-
-    <div>
-        
 @section('main')
-
+<div>
     <ul class="category-group">
         @foreach ($categories as $category)
         <li class="list-group-item"> {{$category->name}} </li> 
-        
-
-
-        @csrf          
+     
         @endforeach
-    </ul> --}}
+    </ul> 
     
-    </div>
+</div>
 
-@endsection()
+@endsection
