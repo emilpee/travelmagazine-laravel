@@ -2,10 +2,6 @@
 
 @section('main')
 
-@can('superuser-only')
-<a href="{{ url('/listEditArticle') }}">Skyddad sida</a>
-@endcan
-
     <div class="container">
 
         <ul class="list-group">
