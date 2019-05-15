@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Article;
 use Illuminate\Http\Request;
+/* use Illuminate\Support\Facades\Input; */
 
 class ArticleController extends Controller
 {
@@ -13,12 +15,10 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
-        $articles = Article::all();  //med api behöver du inte return to view. utan bara return movies
-        return view ('/', [
+        $articles = Article::all();
+        return view('magazine.index', [
             'articles' => $articles
         ]);
-        
     }
 
     /**
@@ -50,7 +50,10 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        //
+        $article = Article::findOrFail($id);
+        return view('magazine.singleArticle', [
+            'article' => $article
+        ]);
     }
 
     /**
@@ -61,7 +64,10 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $article = Article::find($id);
+        return view('magazine.edit', [
+            'article' => $article
+        ]);
     }
 
     /**
@@ -73,7 +79,13 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       /*  $article = Article::find($id);
+        $article->title = Input::get('title');
+        $article->lead = Input::get('lead');
+        $article->bodytext = Input::get('bodytext');
+        $article->save();
+
+        return redirect('article'); */
     }
 
     /**
