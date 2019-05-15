@@ -15,12 +15,8 @@ Route::get('/', function() {
     return view('welcome');
 });
 
-<<<<<<< HEAD
-Route::resource('welcome', 'ArticleController');
-=======
 
 Route::resource('/article','ArticleController');
->>>>>>> 2167d5ecef900c78cb6ec492c2ee356e5a81ad6b
 
 Auth::routes();
 
