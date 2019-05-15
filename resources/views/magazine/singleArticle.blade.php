@@ -1,4 +1,4 @@
-@extends ('articles.layout')
+@extends ('magazine.layout')
 
 @section('main')
 
