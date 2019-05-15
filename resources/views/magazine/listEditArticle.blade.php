@@ -1,12 +1,9 @@
-@extends ('magazine.layout')
+@extends('magazine.layout')
 
 @section('main')
 
-@can('superuser-only')
-<a href="{{ url('/listEditArticle') }}">Skyddad sida</a>
-@endcan
-
     <div class="container">
+            <h1>Skyddad sida</h1>
 
         <ul class="list-group">
             @foreach ($articles as $article)
@@ -14,8 +11,8 @@
             @csrf          
             @endforeach
         </ul>
-
-
-
+ 
+    
+       
     </div>
 @endsection
