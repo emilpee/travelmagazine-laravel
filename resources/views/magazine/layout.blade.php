@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <title>Articles</title>
     
 </head>
 <body class="container">
-<div>
+<div id="app">
+
+    <router-view name="MagazineHeader"></router-view>
+
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -24,6 +28,8 @@
                 </div>
             @endif
 @yield('main')
-<script type="text/javascript" src="js/app.js"></script>
+<router-view name="MagazineFooter"></router-view>
+</div>
 </body>
 </html>
+<script src="{{ asset('js/app.js') }}"></script>
