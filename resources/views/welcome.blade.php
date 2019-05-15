@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <title>Laravel</title>
 
         <!-- Fonts -->
@@ -79,9 +79,27 @@
                 </div>
             @endif
 
+          
+
+   <div>
+       <ul>
+        @foreach ($articles as $article)
+           <h1>{{ $article->title }}</h1>
+           <h2>{{$article->lead }}</h2>
+           <p>{{$article->bodytext }}</p>
+           @csrf
+       
+       
+       @endforeach
+       </ul>
+   </div>
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
+                </div>
+                
+                <div id="app">
+                    <example-component :title="'This cool app'"></example-component>
                 </div>
 
                 <div class="links">
@@ -95,5 +113,6 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript" src="js/app.js"></script>
     </body>
 </html>
