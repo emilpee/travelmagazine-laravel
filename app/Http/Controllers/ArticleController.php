@@ -79,13 +79,13 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-       /*  $article = Article::find($id);
+        $article = Article::find($id);
         $article->title = Input::get('title');
         $article->lead = Input::get('lead');
         $article->bodytext = Input::get('bodytext');
         $article->save();
 
-        return redirect('article'); */
+        return redirect('article');
     }
 
     /**
