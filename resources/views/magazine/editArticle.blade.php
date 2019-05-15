@@ -2,12 +2,9 @@
 
 @section('main')
 
-@can('superUsers-only')
-<a href="{{ url('/editArticle') }}">Skyddad sida</a>
-@endcan
-<a href="{{ url('magazine.editArticle') }}">AASkyddad sida</a>
-
     <div class="container">
+            <h1>Skyddad sida</h1>
+            
         <ul class="list-group">
             @foreach ($articles as $article)
             <li class="list-group-item"> {{$article->title}} </li>
@@ -15,6 +12,9 @@
             @endforeach
         </ul>
 
+        
+    
+       
 
 
     </div>

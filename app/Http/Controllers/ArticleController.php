@@ -6,8 +6,6 @@ use App\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
-//use Illuminate\Support\Facades\Validator;
-
 class ArticleController extends Controller
 {
     /**
@@ -91,7 +89,7 @@ class ArticleController extends Controller
 
         $article->save();
 
-        return redirect('magazine');
+        return redirect('magazine.editArticle');
     }
 
     /**
