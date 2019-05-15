@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Illuminate\Http\Request;
-/* use Illuminate\Support\Facades\Input; */
+use Illuminate\Support\Facades\Input;
+
+//use Illuminate\Support\Facades\Validator;
 
 class ArticleController extends Controller
 {
@@ -83,9 +85,13 @@ class ArticleController extends Controller
         $article->title = Input::get('title');
         $article->lead = Input::get('lead');
         $article->bodytext = Input::get('bodytext');
+        $article->category_id = Input::get('category_id');
+        $article->img_url = Input::get('img_url');
+        $article->prio = Input::get('prio');
+
         $article->save();
 
-        return redirect('article');
+        return redirect('magazine');
     }
 
     /**
