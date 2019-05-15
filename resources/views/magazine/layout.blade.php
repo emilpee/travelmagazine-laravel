@@ -18,7 +18,10 @@
                 <div class="top-right links">
                     @auth
                         <!-- Edit ska bara gå att komma åt som admin-->
-                        <a href="{{ url('/editArticle') }}">Edit</a>
+                        @can('superuser-only')
+                        <a href="{{ url('/edit') }}">Edit</a>
+                        @endcan
+
                         <a href="{{ url('/') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
