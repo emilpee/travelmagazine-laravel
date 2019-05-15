@@ -2,10 +2,10 @@
 
 @section('main')
 
-    <div class="content">
-        <ul>
+    <div class="container">
+        <ul class="list-group">
             @foreach ($articles as $article)
-            <li> {{$article->title}} </li>
+            <li class="list-group-item"> {{$article->title}} </li>
             @csrf          
             @endforeach
         </ul>
