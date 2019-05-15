@@ -1,9 +1,8 @@
 <template>
     <header>
         <nav>
-        asdiuh
-            <a href="/">Start</a>
-            <a href="">Categories</a>
+            <router-link to="/">Home</router-link>
+            <router-link to="/categories">Categories</router-link>
         </nav>
     </header>
 </template>
