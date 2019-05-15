@@ -2,10 +2,9 @@
 
 @section('main')
 
-@can('superUsers-only')
-<a href="{{ url('/editArticle') }}">Skyddad sida</a>
+@can('superuser-only')
+<a href="{{ url('/listEditArticle') }}">Skyddad sida</a>
 @endcan
-<a href="{{ url('magazine.editArticle') }}">AASkyddad sida</a>
 
     <div class="container">
         <Header></Header>
