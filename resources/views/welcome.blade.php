@@ -83,10 +83,6 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-                
-                <div id="app">
-                    <example-component :title="'This cool app'"></example-component>
-                </div>
 
 
                 <div class="links">

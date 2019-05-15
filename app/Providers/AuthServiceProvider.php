@@ -27,7 +27,7 @@ class AuthServiceProvider extends ServiceProvider
 
         //
 
-        Gate::define('superuser-only', function ($user) {
+        Gate::define('superUsers-only', function ($user) {
             if ($user->isAdmin == 1) {
                 return true;
             }
