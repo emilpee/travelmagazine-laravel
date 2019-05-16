@@ -20,4 +20,3 @@ Route::resource('/', 'ArticleController');
 Route::get('/categories', 'CategoriesController@index');
 
 
-

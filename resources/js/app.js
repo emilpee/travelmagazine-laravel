@@ -31,7 +31,7 @@ import MagazineFooter from './components/MagazineFooter.vue';
 
 const routes = [
     {
-        path: '/',
+        path: '*',
         components: {
             MagazineHeader: MagazineHeader,
             MagazineFooter: MagazineFooter
@@ -42,7 +42,9 @@ const routes = [
 ]
 
 
-const router = new VueRouter({ routes })
+const router = new VueRouter({ 
+    routes
+})
 
 const app = new Vue({ router }).$mount('#app')
 
