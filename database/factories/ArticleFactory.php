@@ -7,7 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Article::class, function (Faker $faker) {
     return [     
-        'category_id' => $faker->numberBetween($min = 1, $max = 10),
+        'category_id' => $faker->numberBetween($min = 1, $max = 7),
         'prio' => $faker->numberBetween($min = 2, $max = 3),
         'img_url' => $faker->imageUrl($width = 640, $height = 480),
         'author' => $faker->name(),

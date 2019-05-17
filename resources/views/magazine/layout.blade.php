@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-    <title>Articles</title>
-    
+    <title>Taravel</title>
 </head>
 <body class="container">
 <div id="app">
-
+    <div class="navbar">
     <router-view name="MagazineHeader"></router-view>
 
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="login-btn">
                     @auth
                         <!-- Edit ska bara gå att komma åt som admin-->
                         @can('superuser-only')
@@ -33,6 +33,7 @@
                     @endauth
                 </div>
             @endif
+        </div>
 @yield('main')
 <router-view name="MagazineFooter"></router-view>
 </div>

@@ -37114,9 +37114,9 @@ var render = function() {
     _c(
       "nav",
       [
-        _c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")]),
+        _c("router-link", { attrs: { to: { path: "/" } } }, [_vm._v("Home")]),
         _vm._v(" "),
-        _c("router-link", { attrs: { to: "/categories" } }, [
+        _c("router-link", { attrs: { to: { path: "/categories" } } }, [
           _vm._v("Categories")
         ])
       ],
@@ -51988,7 +51988,7 @@ window.Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]);
 
 
 var routes = [{
-  path: '/',
+  path: '*',
   components: {
     MagazineHeader: _components_MagazineHeader_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     MagazineFooter: _components_MagazineFooter_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
