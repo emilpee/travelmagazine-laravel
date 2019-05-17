@@ -12,17 +12,17 @@
 <body class="container">
 <div id="app">
     <div class="navbar">
-    <router-view name="MagazineHeader"></router-view>
+
+        <div class="nav-btn">
+            <!-- icon -->
+            <a href="{{ url('/') }}">Home</a>
+            <a href="{{ url('/categories') }}">Categories</a>
+        </div>
 
             @if (Route::has('login'))
                 <div class="login-btn">
-                    @auth
-                        <!-- Edit ska bara gå att komma åt som admin-->
-                        @can('superuser-only')
-                        <a href="{{ url('/edit') }}">Edit</a>
-                        @endcan
-
-                        <a href="{{ url('/') }}">Home</a>
+                    @auth 
+                                                
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
