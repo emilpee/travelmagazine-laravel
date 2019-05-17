@@ -30,9 +30,8 @@ import MagazineFooter from './components/MagazineFooter.vue';
 
 const routes = [
     {
-        path: '/',
+        path: '*',
         components: {
-            
             MagazineFooter: MagazineFooter
         }
     },
@@ -41,6 +40,7 @@ const routes = [
 
 
 const router = new VueRouter({ 
+    mode: 'history',
     routes
 })
 

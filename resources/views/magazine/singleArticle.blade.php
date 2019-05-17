@@ -1,8 +1,8 @@
 @extends ('magazine.layout')
 
 @section('main')
-
-@can('superUsers-only')
+ 
+ @can('superUsers-only')
     <a href="{{ url('/edit') }}">Edit</a>
 @endcan
 
