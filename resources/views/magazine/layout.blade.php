@@ -16,7 +16,7 @@
         <div class="nav-btn">
             <!-- icon -->
             <a href="{{ url('/') }}">Home</a>
-            <a href="{{ url('/categories') }}">Categories</a>
+            <a href="{{ url('/category') }}">Categories</a>
         </div>
 
             @if (Route::has('login'))

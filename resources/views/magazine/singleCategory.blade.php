@@ -5,9 +5,9 @@
     <ul class="article-group">
         
             <div class="box">
-                <img src="{{$article->img_url}}">
-                <h2> {{$article->title}} </h2> 
-                <h3> {{$article->lead}} </h3> 
+                <img src="{{$category->img_url}}">
+                <h2> {{$category->name}} </h2> 
+                
             </div>
        
     </ul> 
