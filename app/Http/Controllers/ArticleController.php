@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Http\Resources\Article as ArticleResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 
@@ -16,9 +17,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::all();
-        return view('magazine.index', [
-            'articles' => $articles
-        ]);
+        return ArticleResource::collection($articles);
     }
 
     /**
@@ -51,9 +50,7 @@ class ArticleController extends Controller
     public function show($id)
     {
         $article = Article::findOrFail($id);
-        return view('magazine.singleArticle', [
-            'article' => $article
-        ]);
+        return new ArticleResource($article);
     }
 
     /**
