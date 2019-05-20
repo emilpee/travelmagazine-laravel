@@ -1,5 +1,5 @@
 <template>
-    <article class="container">
+    <div class="foot">
         <section>
             <h3>Get the news first</h3>
             <label>Email
@@ -17,7 +17,6 @@
             <p>411 04 Göteborg</p>
             <p>Tel: 0022-22000</p>
             <p>E-mail: info@taravel.com</p>
-            </ul>
         </section>
         <section>
             <h3>Follow Us</h3>
@@ -27,11 +26,11 @@
                 <li>Twitter</li>
             </ul>
         </section>
-    </article>
+    </div>
 </template>
 
 <style scoped>
-    .container {
+    .foot {
         display: flex;
         flex-direction: row;
         background: #FFA7A7;
@@ -82,7 +81,7 @@
         border-left: 1px solid black;
         border-right: 1px solid black;
         
-
+    }
     h3 {
         padding: 2rem;
     }

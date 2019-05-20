@@ -47,6 +47,7 @@
             @endif
         </div>
 @yield('main')
+
 <router-view name="MagazineFooter"></router-view>
 </div>
 </body>

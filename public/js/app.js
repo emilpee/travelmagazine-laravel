@@ -6211,7 +6211,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.container[data-v-f3280c0c] {\n    display: flex;\n    flex-direction: row;\n    background: #FFA7A7;\n    max-width: 100vw;\n    width: 100%;\n}\nsection[data-v-f3280c0c] {\n    flex: 1;\n    text-align: left;\n    padding: 1rem;\n}\nh3[data-v-f3280c0c] {\n    padding: 1rem 0;\n}\np[data-v-f3280c0c] {\n    margin: 0;\n}\n#submit[data-v-f3280c0c] {\n    color: grey;\n    text-decoration: none;\n    border: rgb(80, 79, 79) 1px solid;\n}\n#submit[data-v-f3280c0c]:hover {\n    background: rgb(65, 59, 59);\n}\n#checkbox_news[data-v-f3280c0c]{\n    display: none;\n}\n.checkbox label[data-v-f3280c0c]::before{\ncontent: \"\";\nbackground: white;\ndisplay: inline-block;\nheight: 16px;\nwidth: 16px;\nborder: 1px solid;\nmargin: 0 .6rem  0 0;\n}\n.checkbox label[data-v-f3280c0c]::after {\n    background: #FFA7A7;\n}\n.contact[data-v-f3280c0c] {\n    border-left: 1px solid black;\n    border-right: 1px solid black;\n}\n", ""]);
+exports.push([module.i, "\n.foot[data-v-f3280c0c] {\n    display: flex;\n    flex-direction: row;\n    background: #FFA7A7;\n    max-width: 100vw;\n    width: 100%;\n}\nsection[data-v-f3280c0c] {\n    flex: 1;\n    text-align: left;\n    padding: 1rem;\n}\nh3[data-v-f3280c0c] {\n    padding: 1rem 0;\n}\np[data-v-f3280c0c] {\n    margin: 0;\n}\n#submit[data-v-f3280c0c] {\n    color: grey;\n    text-decoration: none;\n    border: rgb(80, 79, 79) 1px solid;\n}\n#submit[data-v-f3280c0c]:hover {\n    background: rgb(65, 59, 59);\n}\n#checkbox_news[data-v-f3280c0c]{\n    display: none;\n}\n.checkbox label[data-v-f3280c0c]::before{\ncontent: \"\";\nbackground: white;\ndisplay: inline-block;\nheight: 16px;\nwidth: 16px;\nborder: 1px solid;\nmargin: 0 .6rem  0 0;\n}\n.checkbox label[data-v-f3280c0c]::after {\n    background: #FFA7A7;\n}\n.contact[data-v-f3280c0c] {\n    border-left: 1px solid black;\n    border-right: 1px solid black;\n}\nh3[data-v-f3280c0c] {\n    padding: 2rem;\n}\n", ""]);
 
 // exports
 
@@ -37705,7 +37705,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("article", { staticClass: "container" }, [
+    return _c("div", { staticClass: "foot" }, [
       _c("section", [
         _c("h3", [_vm._v("Get the news first")]),
         _vm._v(" "),
@@ -37730,10 +37730,9 @@ var staticRenderFns = [
         _c("h3", [_vm._v("Contact Us")]),
         _vm._v(" "),
         _c("p", [_vm._v("Kruthusgatan 17")]),
-          _c("li", [_vm._v("Kruthusgatan 17, 411 04 Göteborg.")]),
-          _vm._v(" "),
+        _vm._v(" "),
         _c("p", [_vm._v("411 04 Göteborg")]),
-          _vm._v(" "),
+        _vm._v(" "),
         _c("p", [_vm._v("Tel: 0022-22000")]),
         _vm._v(" "),
         _c("p", [_vm._v("E-mail: info@taravel.com")])
@@ -52774,7 +52773,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/lib/loader.js):\n\r\n            grid-template-rows: \r\n                             ^\r\n      Expected \";\".\n   ╷\n52 │             grid-template-rows: \r\n   │                               ^\n   ╵\n  stdin 52:31  root stylesheet\r\n      in C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\resources\\sass\\app.scss (line 52, column 31)\n    at runLoaders (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\webpack\\lib\\NormalModule.js:301:20)\n    at C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at render (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass-loader\\lib\\loader.js:52:13)\n    at Function.$2 (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:24443:48)\n    at wP.$2 (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:15367:15)\n    at uU.vt (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:9079:42)\n    at uU.vs (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:9081:32)\n    at iB.uF (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8429:46)\n    at us.$0 (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8571:7)\n    at Object.eH (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:1512:80)\n    at ad.ba (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8492:3)\n    at iO.ba (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8422:25)\n    at iO.cv (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8409:6)\n    at py.cv (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8199:35)\n    at Object.m (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:1383:19)\n    at C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:5078:51\n    at xf.a (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:1394:71)\n    at xf.$2 (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8214:23)\n    at vS.$2 (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8209:25)\n    at uU.vt (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:9079:42)\n    at uU.vs (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:9081:32)\n    at iB.uF (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8429:46)\n    at us.$0 (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8571:7)\n    at Object.eH (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:1512:80)\n    at ad.ba (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8492:3)\n    at iO.ba (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8422:25)\n    at iO.cv (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8409:6)\n    at pz.$0 (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8204:24)\n    at Object.If (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:1540:5)\n    at nF.Is (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:1542:7)\n    at pD.$0 (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:8175:22)\n    at Je (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:580:52)\n    at Immediate.<anonymous> (C:\\xampp\\htdocs\\TravelMagazine\\travelmagazine-laravel\\node_modules\\sass\\sass.dart.js:589:51)\n    at runCallback (timers.js:705:18)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

@@ -8,10 +8,13 @@
 /* @import '~bootstrap/scss/bootstrap'; */
 
 body {
+    margin: 0;
     
     #app {
+       
         
         .navbar {
+            
             display: flex;
             flex-direction: row;
             padding: 2rem 1rem;
@@ -48,29 +51,83 @@ body {
             max-width:1000px;
             margin: 0 auto; 
             display: grid;
-            grid-template-columns:
-            grid-template-rows: 
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: ($baseline*5) ($baseline*0.5) ($baseline*2.2) ($baseline*0.5) ($baseline*8) ($baseline*6) ($baseline*3) $baseline $baseline $baseline;
             grid-template-areas: 
-        
+            "mimg mimg mimg mimg mimg mimg mimg"
+            ". . . tag . . . "
+            ". mhead mhead mhead mhead mhead ."
+            "search search search search search search ad"
+            "articles articles articles articles articles articles ad"
+            "flex flex flex flex flex flex flex"
+            "bigad bigad bigad bigad bigad bigad bigad"
+            "cat cat cat cat cat cat cat"
+            "catego catego catego catego catego catego catego";
+            
             .mainimg {
-                background: red;
-                height: 300px;
-                width: 700px;
+                grid-area: mimg;
+                background: lightblue;
             }
             .mainheader {
-                background: white;
-
+                grid-area: mhead;
+                background: gold;
+                transform: translateY(-8rem);
+            }
+            .tag {
+                grid-area: tag;
+                background: $pig;
+                z-index: 1;
+                transform: translateY(-7rem);
             }
 
-
-
-            
-        ul {
-            li{
-                font-size: 1rem;
+            .search {
+                grid-area: search;
+                background: lime;
+                margin-bottom: .4rem;
             }
-        }
-        }
+
+            .articles {
+                grid-area: articles;
+                background: green;
+                display: flex;
+            }
+
+            .ad {
+                grid-area: ad;
+                background: orange;
+                margin-left:.4rem; 
+            }
+            .flex {
+                margin: 1rem 0;
+                grid-area: flex;
+                background: pink;
+                .tv {
+                    .list {
+                        
+                        ul{
+                            //max-height: 600px;
+                            li{
+                               font-size: 0.5rem; 
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+
+            }
+            .bigad {
+                grid-area: bigad;
+                background: blue;
+            }
+            .cat{
+                grid-area: cat;
+                background: rebeccapurple;
+            }
+            .categories {
+                    grid-area: catego;
+                    background: violet;
+            }
+
 
 
 
@@ -83,4 +140,6 @@ body {
 
 
 
+    }
 }
+
