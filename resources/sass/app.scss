@@ -1,6 +1,6 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
+@import url('https://fonts.googleapis.com/css?family=Pattaya&display=swap');
 // Variables
 @import 'variables';
 
@@ -15,8 +15,19 @@ body {
             display: flex;
             flex-direction: row;
             padding: 2rem 1rem;
-            font-size: 1.5rem;
+            font-size: 1rem;
+            background: $background;
 
+            .nav-btn {
+                
+                font-size: 1.4rem;
+                
+                .logo {
+                font-family: 'Pattaya', sans-serif;
+                font-size:3rem;
+                padding: 1rem;
+                }
+            }
             & .login-btn {
                 flex: 1;
                 align-items: flex-end; 
@@ -24,12 +35,52 @@ body {
                 text-align: right;
             }
             & a {
-                color: grey;
+                color: rgb(0, 0, 0);
                 text-decoration: none;
             }
             & :hover {
-                color: red;
+                color: $pig;
             }
         }
+
+
+        .container {
+            max-width:1000px;
+            margin: 0 auto; 
+            display: grid;
+            grid-template-columns:
+            grid-template-rows: 
+            grid-template-areas: 
+        
+            .mainimg {
+                background: red;
+                height: 300px;
+                width: 700px;
+            }
+            .mainheader {
+                background: white;
+
+            }
+
+
+
+            
+        ul {
+            li{
+                font-size: 1rem;
+            }
+        }
+        }
+
+
+
+
+
+
+
+
     }
+
+
+
 }

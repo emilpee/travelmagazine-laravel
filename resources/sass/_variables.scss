@@ -6,6 +6,15 @@ $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
+
+%center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+$background:#e5e5e5;
+$pig:#FFA7A7;
 // Colors
 $blue: #3490dc;
 $indigo: #6574cd;

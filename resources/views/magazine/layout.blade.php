@@ -14,9 +14,10 @@
     <div class="navbar">
 
         <div class="nav-btn">
-            <!-- icon -->
-            <a href="{{ url('/') }}">Home</a>
+            <a href="{{ url('/') }}" class="logo">GO!</a>
+                      
             <a href="{{ url('/categories') }}">Categories</a>
+            
         </div>
 
             @if (Route::has('login'))

@@ -1,10 +1,21 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);/* @import '~bootstrap/scss/bootstrap'; */
+@import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Pattaya&display=swap);/* @import '~bootstrap/scss/bootstrap'; */
 
 body #app .navbar {
   display: flex;
   flex-direction: row;
   padding: 2rem 1rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  background: #e5e5e5;
+}
+
+body #app .navbar .nav-btn {
+  font-size: 1.4rem;
+}
+
+body #app .navbar .nav-btn .logo {
+  font-family: "Pattaya", sans-serif;
+  font-size: 3rem;
+  padding: 1rem;
 }
 
 body #app .navbar .login-btn {
@@ -15,11 +26,15 @@ body #app .navbar .login-btn {
 }
 
 body #app .navbar a {
-  color: grey;
+  color: black;
   text-decoration: none;
 }
 
 body #app .navbar :hover {
-  color: red;
+  color: #FFA7A7;
+}
+
+body #app ul li {
+  font-size: 1rem;
 }
 
