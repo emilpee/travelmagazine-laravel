@@ -84,12 +84,13 @@ class ArticleController extends Controller
         $article->lead = Input::get('lead');
         $article->bodytext = Input::get('bodytext');
         $article->category_id = Input::get('category_id');
+        $article->author = Input::get('author');
         $article->img_url = Input::get('img_url');
-        $article->prio = Input::get('prio');
+        $article->prio = Input::get('prio');         
 
         $article->save();
 
-        return redirect('magazine.edit');
+        return redirect('/');
     }
 
     /**

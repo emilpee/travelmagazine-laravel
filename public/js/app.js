@@ -37730,9 +37730,10 @@ var staticRenderFns = [
         _c("h3", [_vm._v("Contact Us")]),
         _vm._v(" "),
         _c("p", [_vm._v("Kruthusgatan 17")]),
-        _vm._v(" "),
+          _c("li", [_vm._v("Kruthusgatan 17, 411 04 Göteborg.")]),
+          _vm._v(" "),
         _c("p", [_vm._v("411 04 Göteborg")]),
-        _vm._v(" "),
+          _vm._v(" "),
         _c("p", [_vm._v("Tel: 0022-22000")]),
         _vm._v(" "),
         _c("p", [_vm._v("E-mail: info@taravel.com")])
@@ -37741,11 +37742,13 @@ var staticRenderFns = [
       _c("section", [
         _c("h3", [_vm._v("Follow Us")]),
         _vm._v(" "),
-        _c("p", [_vm._v("Facebook")]),
-        _vm._v(" "),
-        _c("p", [_vm._v("Instagram")]),
-        _vm._v(" "),
-        _c("p", [_vm._v("Twitter")])
+        _c("ul", [
+          _c("li", [_vm._v("Facebook")]),
+          _vm._v(" "),
+          _c("li", [_vm._v("Instagram")]),
+          _vm._v(" "),
+          _c("li", [_vm._v("Twitter")])
+        ])
       ])
     ])
   }

@@ -17,12 +17,15 @@
             <p>411 04 Göteborg</p>
             <p>Tel: 0022-22000</p>
             <p>E-mail: info@taravel.com</p>
+            </ul>
         </section>
         <section>
             <h3>Follow Us</h3>
-            <p>Facebook</p>
-            <p>Instagram</p>
-            <p>Twitter</p>
+            <ul>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>Twitter</li>
+            </ul>
         </section>
     </article>
 </template>
@@ -79,5 +82,8 @@
         border-left: 1px solid black;
         border-right: 1px solid black;
         
+
+    h3 {
+        padding: 2rem;
     }
 </style>
