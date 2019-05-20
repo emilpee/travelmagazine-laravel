@@ -16,7 +16,13 @@
         <div class="nav-btn">
             <!-- icon -->
             <a href="{{ url('/') }}">Home</a>
-            <a href="{{ url('/categories') }}">Categories</a>
+            <a href="{{ url('/categories/1') }}">Asia</a>
+            <a href="{{ url('/categories/2') }}">Europe</a>
+            <a href="{{ url('/categories/3') }}">North America</a>
+            <a href="{{ url('/categories/4') }}">South America</a>
+            <a href="{{ url('/categories/6') }}">Africa</a>
+            <a href="{{ url('/categories/7') }}">Australia</a>
+            <a href="{{ url('/categories/5') }}">Antartica</a>
         </div>
 
             @if (Route::has('login'))
