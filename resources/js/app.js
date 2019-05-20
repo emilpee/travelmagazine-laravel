@@ -26,23 +26,21 @@ window.Vue.use(VueRouter);
 
 /* Vue.component('example-component', require('./components/ExampleComponent.vue').default); */
 
-import MagazineHeader from './components/MagazineHeader.vue';
 import MagazineFooter from './components/MagazineFooter.vue';
 
 const routes = [
     {
         path: '*',
         components: {
-            MagazineHeader: MagazineHeader,
             MagazineFooter: MagazineFooter
         }
     },
-    {path: '/magazine/layout', component: MagazineHeader, name: 'magazine-header'},
     {path: '/magazine/layout', component: MagazineFooter, name: 'magazine-footer'},
 ]
 
 
 const router = new VueRouter({ 
+    mode: 'history',
     routes
 })
 

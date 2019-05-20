@@ -18,3 +18,22 @@
         </section>
     </article>
 </template>
+
+<style scoped>
+    .container {
+        display: flex;
+        flex-direction: row;
+        background: #eee;
+        width: 100%;
+    }
+
+    section {
+        flex: 1;
+        text-align: center;
+    }
+
+    .contact {
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+    }
+</style>
