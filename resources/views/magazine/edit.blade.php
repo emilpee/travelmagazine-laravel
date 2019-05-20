@@ -3,9 +3,10 @@
 @section('main')
 
 
-{!! Form::open(['route' => ['articles.update', $article->article_id], 'method' => 'post']) !!}
-{{method_field('PATCH')}}
+{!! Form::open(['route' => ['update', $article->article_id], 'method' => 'POST']) !!}
+    {{  method_field('POST') }}
     @csrf
+
     <div class="form-group">
         {!! Form::label('prio', 'Prio') !!}
         {!! Form::text('prio', $article->prio, ['class' => 'form-control']) !!}
@@ -14,6 +15,11 @@
     <div class="form-group">
         {!! Form::label('category', 'Category') !!}
         {!! Form::text('category_id', $article->category_id, ['class' => 'form-control']) !!}
+    </div>
+
+    <div class="form-group">
+        {!! Form::label('author', 'Author') !!}
+        {!! Form::text('author', $article->author, ['class' => 'form-control']) !!}
     </div>
 
     <div class="form-group">

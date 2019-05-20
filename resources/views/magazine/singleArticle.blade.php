@@ -3,7 +3,7 @@
 @section('main')
  
  @can('superUsers-only')
-    <a href="{{ url('/edit') }}">Edit</a>
+    <a href="{{ route('edit', $article->article_id) }}">Edit</a>
 @endcan
     <div>
         <h1 class="jumbotron">{{$article->title}}</h1>
@@ -22,10 +22,10 @@
         @auth 
             
         @else
-            <span>Want to read more? Then please either </span>
-            <a href="{{ route('login') }}">Login</a>
+                <span>Want to read more? Then please either </span>
+                <a href="{{ route('login') }}">Login</a>
             @if (Route::has('register'))
-            <span>or if you don't have an account, please </span>
+                <span>or if you don't have an account, please </span>
                 <a href="{{ route('register') }}">Register</a>.
             @endif
 
