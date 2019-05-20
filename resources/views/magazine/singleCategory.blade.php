@@ -2,14 +2,9 @@
 
 @section('main')
 <div>
-    <ul class="article-group">
-        
-            <div class="box">
-                <img src="{{$category->img_url}}">
-                <h2> {{$category->name}} </h2> 
-                
-            </div>
-       
+    <ul class="category-group">
+        <li class="list-group-item"> {{$category->name}} </li> 
+
     </ul> 
 
 </div>
