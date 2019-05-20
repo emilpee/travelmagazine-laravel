@@ -6211,7 +6211,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.container[data-v-f3280c0c] {\n    display: flex;\n    flex-direction: row;\n    background: #eee;\n    width: 100%;\n}\nsection[data-v-f3280c0c] {\n    flex: 1;\n    text-align: center;\n}\n.contact[data-v-f3280c0c] {\n    border-left: 1px solid black;\n    border-right: 1px solid black;\n}\n", ""]);
+exports.push([module.i, "\n.container[data-v-f3280c0c] {\n    display: flex;\n    flex-direction: row;\n    background: #eee;\n    width: 100%;\n}\nsection[data-v-f3280c0c] {\n    flex: 1;\n    text-align: center;\n    background: green;\n}\n.contact[data-v-f3280c0c] {\n    border-left: 1px solid black;\n    border-right: 1px solid black;\n}\nh3[data-v-f3280c0c] {\n    padding: 2rem;\n}\n", ""]);
 
 // exports
 
@@ -37715,21 +37715,25 @@ var staticRenderFns = [
       _c("section", [
         _c("h3", [_vm._v("Contact Us")]),
         _vm._v(" "),
-        _c("p", [_vm._v("Kruthusgatan 17, 411 04 Göteborg.")]),
-        _vm._v(" "),
-        _c("p", [_vm._v("Tel:")]),
-        _vm._v(" "),
-        _c("p", [_vm._v("E-mail:")])
+        _c("ul", [
+          _c("li", [_vm._v("Kruthusgatan 17, 411 04 Göteborg.")]),
+          _vm._v(" "),
+          _c("li", [_vm._v("Tel:")]),
+          _vm._v(" "),
+          _c("li", [_vm._v("E-mail:")])
+        ])
       ]),
       _vm._v(" "),
       _c("section", [
         _c("h3", [_vm._v("Follow Us")]),
         _vm._v(" "),
-        _c("p", [_vm._v("Facebook")]),
-        _vm._v(" "),
-        _c("p", [_vm._v("Instagram")]),
-        _vm._v(" "),
-        _c("p", [_vm._v("Twitter")])
+        _c("ul", [
+          _c("li", [_vm._v("Facebook")]),
+          _vm._v(" "),
+          _c("li", [_vm._v("Instagram")]),
+          _vm._v(" "),
+          _c("li", [_vm._v("Twitter")])
+        ])
       ])
     ])
   }
@@ -52766,8 +52770,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\travelmagazine-laravel\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\travelmagazine-laravel\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Applications/MAMP/htdocs/travelmagazine-laravel/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/travelmagazine-laravel/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -13,11 +13,11 @@ public/categories#/2/2
 */
 
 Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/categories', 'CategoriesController');
-Route::get('/categories/{id}', 'CategoriesController@show');
+Route::resource('/categories', 'CategoryController');
+Route::get('/categories/{id}', 'CategoryController@show');
 
 Route::resource('/', 'ArticleController');
 Route::get('/{id}', 'ArticleController@show');
 
-Route::get('/home', 'HomeController@index')->name('home');
