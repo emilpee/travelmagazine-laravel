@@ -45,10 +45,12 @@
         flex: 1;
         text-align: left;
         padding: 1rem;
+        display: flex;
+        align-items: baseline;
+        flex-direction: column;
     }
 
     h3 {
-        padding: 1rem 0;
         font-weight: normal;
     }
     p {
