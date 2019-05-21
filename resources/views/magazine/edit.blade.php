@@ -1,8 +1,19 @@
 @extends('magazine.layout')
 
 @section('main')
-
-
+@if (Route::has('login'))
+    <div class="login-btn">
+        @cannot('superUsers-only')    
+            <span>You have no authorization.</span>
+        @endcannot
+        @auth 
+        @else
+            <span>You have no authorization, please</span>
+            <a href="{{ route('login') }}">Login</a>
+        @endauth
+    </div>
+@endif
+@can('superUsers-only')
 {!! Form::open(['route' => ['update', $article->article_id], 'method' => 'POST']) !!}
     {{  method_field('POST') }}
     @csrf
@@ -45,5 +56,5 @@
     {!! Form::submit('Edit this article', ['class' => 'btn btn-info']) !!}
  
 {!! Form::close() !!}
-
+@endcan
 @endsection
