@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
@@ -15,9 +16,43 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
+        $articles = DB::table('articles')
+        ->orderBy('prio', 'asc')
+        ->get();
         return view('magazine.index', [
             'articles' => $articles
+        ]);
+    }
+
+    public function frontPage()
+    {
+        $categories = DB::table('categories')
+        ->orderBy('category_id', 'asc')
+        ->get();
+        $ads = DB::table('ads')
+        ->where('format', '=', 1)
+        ->get();
+        $mainArticle = DB::table('articles')
+        ->where('prio', '=', 1)
+        ->get();
+        $secondArticle = DB::table('articles')
+        ->where('prio', '=', 2)
+        ->limit(6)
+        ->get();
+        $thirdArticle = DB::table('articles')
+        ->where('prio', '=', 3)
+        ->get();
+        $thirdChosenArticle = DB::table('articles')
+        ->where('prio', '=', 3)
+        ->limit(1)
+        ->get();
+        return view('magazine.index', [
+            'mainArticle' =>  $mainArticle, 
+            'secondArticle' =>  $secondArticle,
+            'thirdArticle' =>  $thirdArticle,
+            'thirdChosenArticle' =>  $thirdChosenArticle,
+            'ads' => $ads,
+            'categories' => $categories
         ]);
     }
 

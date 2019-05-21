@@ -16,9 +16,19 @@
                 <h3> {{$article->lead}} </h3>
             </div>
         </div>
+    
+
+
+
+    <article>
+        <a href="{{ route('show', $article->article_id) }}">
+            <img src="{{$article->img_url}}" alt="Archive picture">
+            <h1>{{$article->title}}</h1>
+            <p>{{$article->lead}}</p>
+        </a>
+    </article> 
+
     @endforeach
-
-
 </div>
 
 @endsection 

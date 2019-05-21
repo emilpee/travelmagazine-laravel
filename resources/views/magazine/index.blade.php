@@ -1,17 +1,24 @@
 @extends ('magazine.layout')
 
 @section('main')
-
     <main class="wrapper">
 
-        <div class="mainimg"></div>
+    @foreach ($mainArticle as $article)
+        <div class="mainimg">
+            <img src="{{$article->img_url}}">
+        </div>
         <div class="tag">
             <h2>Go Europe</h2>
         </div>
         <div class="mainheader">
-            <h1>Manarola, Italy</h1>
+     
+            <h1>{{$article->title}}</h1>
+            <h3>{{$article->lead}}</h3>
+
+        @endforeach
         </div>
-        
+    
+
        <div class="search">
            <input type="text">
            
@@ -21,91 +28,51 @@
        </div>
 
     <div class="grid">
+    @foreach ($secondArticle as $article)
+    <a href="{{ route ('show',  $article->article_id) }}">
         <article class="griditem">
-            <section class="img"></section>
+            <section class="img">
+            <img src="{{$article->img_url}}" style="width:100%;" alt="">
+            </section>
             <section class="text">
-                <h4>Go Europe</h4>
-                <h3>GO HERE</h3>
-                <p>Bla kljadladh</p>
+                <h1>{{$article->title}}</h1>
+                <p>{{$article->lead}}</p>
             </section>
         </article>
-        <article class="griditem">
-            <section class="img"></section>
-            <section class="text">
-                <h4></h4>
-                <h3></h3>
-                <p></p>
-            </section>
-        </article>
-        <article class="griditem">
-            <section class="img"></section>
-            <section class="text">
-                <h4></h4>
-                <h3></h3>
-                <p></p>
-            </section>
-        </article>
-        <article class="griditem">
-            <section class="img"></section>
-            <section class="text">
-                <h4></h4>
-                <h3></h3>
-                <p></p>
-            </section>
-        </article>
-        <article class="griditem">
-            <section class="img"></section>
-            <section class="text">
-                <h4></h4>
-                <h3></h3>
-                <p></p>
-            </section>
-        </article>
-        <article class="griditem">
-            <section class="img"></section>
-            <section class="text">
-                <h4></h4>
-                <h3></h3>
-                <p></p>
-            </section>
-        </article>
-        <article class="griditem">
-            <section class="img"></section>
-            <section class="text">
-                <h4></h4>
-                <h3></h3>
-                <p></p>
-            </section>
-        </article>
-        <article class="griditem">
-            <section class="img"></section>
-            <section class="text">
-                <h4></h4>
-                <h3></h3>
-                <p></p>
-            </section>
-        </article>
+    </a>                
+    @endforeach
     </div>
 
-       <div class="ad"></div>
-       <div class="ad"></div>
-       <div class="ad"></div>
+        @foreach ($ads as $ad)
+            <div class="ad">
+                <img src="{{$ad->img_url}}">
+            </div>
+        @endforeach
+         
 
        <div class="flex">
-                <div class="imgtv">
-                    <h2></h2>
-                    <p></p>
+            @foreach ($thirdChosenArticle as $article)
+                <div class="imgtv" style="background: url( {{$article->img_url}} ); background-size:cover;">
+                    <a href="{{ route ('show',  $article->article_id) }}">
+                        <h2>{{$article->title}}</h2>
+                        <p>{{$article->lead}}</p>
+                    </a>        
                 </div>
-                <aside class="list">
-                        {{--                    
-         <ul class="list-group">
-            @foreach ($articles as $article)
-            <a href="{{ route('show', $article->article_id) }}" class="list-group-item"> {{$article->title}} </a>
-            <li class="list-group-item"> {{$article->lead}} </li>
-            @csrf          
             @endforeach
-        </ul> --}}
-                </aside>
+            
+        <aside class="list">
+                                            
+            <ul class="list-group">
+                @foreach ($thirdArticle as $article)
+        
+                    <a href="{{ route('show', $article->article_id) }}" class="list-group-item"> {{$article->title}} </a>
+                    <li class="list-group-item"> {{$article->lead}} </li>        
+                
+
+                @endforeach
+            </ul>
+
+        </aside>
                     
        </div>
 
@@ -118,49 +85,15 @@
        </div>
 
        <div class="categories">
+       @foreach ($categories as $category)
            <a class="catimg" href="#">
+               <img src="{{$category->img_url}}" alt="{{$category->name}}">
                <div>
-                   <h4></h4>
-                   <p></p>
+                   <h4>{{$category->name}}</h4>
+                   <p>{{$category->text}}</p>
                </div>
            </a>
-           <a class="catimg" href="#">
-               <div>
-                   <h4></h4>
-                   <p></p>
-               </div>
-           </a>
-           <a class="catimg" href="#">
-               <div>
-                   <h4></h4>
-                   <p></p>
-               </div>
-           </a>
-           <a class="catimg" href="#">
-               <div>
-                   <h4></h4>
-                   <p></p>
-               </div>
-           </a>
-           <a class="catimg" href="#">
-               <div>
-                   <h4></h4>
-                   <p></p>
-               </div>
-           </a>
-           <a class="catimg" href="#">
-               <div>
-                   <h4></h4>
-                   <p></p>
-               </div>
-           </a>
-           <a class="catimg" href="#">
-               <div>
-                   <h4></h4>
-                   <p></p>
-               </div>
-           </a>
-
+        @endforeach
        </div>
 
     </main>
