@@ -2,54 +2,81 @@
 
 @section('main')
 
-    <div class="container">
+    <main class="wrapper">
 
         <div class="mainimg"></div>
         <div class="tag">
-            <h2>Kategori</h2>
+            <h2>Go Europe</h2>
         </div>
         <div class="mainheader">
-            <h1>Rubrik</h1>
+            <h1>Manarola, Italy</h1>
         </div>
         
-       <div class="search"></div>
+       <div class="search">
+           <input type="text">
+           
+       </div>
+       <div class="searchbtn">
+            <input type="submit">
+       </div>
 
        <div class="articles">
-           <div class="artimg"></div>
+           <div class="box1">
+           
            <div class="artlead">
-               <h4></h4>
-               <h3></h3>
-               <p></p>
+           <div class="artimg"></div>
+            <div>
+               <h4>jhfgjf</h4>
+               <h3>fhks</h3>
+               <p>khk</p>
+               </div>
            </div>
-           <div class="artimg"></div>
            <div class="artlead">
-               <h4></h4>
-               <h3></h3>
-               <p></p>
+           <div class="artimg"></div>
+           <h4>jhfgjf</h4>
+               <h3>fhks</h3>
+               <p>khk</p>
+           <div></div>
+
            </div>
-           <div class="artimg"></div>
+           
            <div class="artlead">
-               <h4></h4>
-               <h3></h3>
-               <p></p>
+           <div class="artimg"></div>
+           <div>
+           <h4>jhfgjf</h4>
+               <h3>fhks</h3>
+               <p>khk</p>
+               </div>
            </div>
-           <div class="artimg"></div>
-           <div class="artlead">
-               <h4></h4>
-               <h3></h3>
-               <p></p>
            </div>
-           <div class="artimg"></div>
+           <div class="box2">
+           
            <div class="artlead">
-               <h4></h4>
-               <h3></h3>
-               <p></p>
+           <div class="artimg"></div>
+           <div>
+           <h4>jhfgjf</h4>
+               <h3>fhks</h3>
+               <p>khk</p>
+               </div>
            </div>
-           <div class="artimg"></div>
+           
            <div class="artlead">
-               <h4></h4>
-               <h3></h3>
-               <p></p>
+           <div class="artimg"></div>
+           <div>
+           <h4>jhfgjf</h4>
+               <h3>fhks</h3>
+               <p>khk</p>
+               </div>
+           </div>
+           
+           <div class="artlead">
+           <div class="artimg"></div>
+           <div>
+                <h4>jhfgjf</h4>
+               <h3>fhks</h3>
+               <p>khk</p>
+               </div>   
+           </div>
            </div>
        </div>
 
@@ -60,24 +87,28 @@
        <div class="flex">
             <h2></h2>
             <p></p>
-            <div class="tv">
+            <section class="tv">
                 <div class="imgtv">
                     <h2></h2>
                     <p></p>
                 </div>
-                <div class="list">
-    {{--                     <ul class="list-group">
-                            @foreach ($articles as $article)
-                            <li class="list-group-item"> {{$article->title}} </li>
-                            <li class="list-group-item"> {{$article->lead}} </li>
-                            @csrf          
-                            @endforeach
-                        </ul> --}}
-                    </div>
-            </div>
+                <aside class="list">
+                        {{--                    
+         <ul class="list-group">
+            @foreach ($articles as $article)
+            <li class="list-group-item"> {{$article->title}} </li>
+            <li class="list-group-item"> {{$article->lead}} </li>
+            @csrf          
+            @endforeach
+        </ul> --}}
+                </aside>
+                    
+            </section>
        </div>
 
-       <div class="bigad"></div>
+       <div class="big">
+        hej
+        </div>
 
        <div class="cat">
         <h2></h2>
@@ -88,5 +119,5 @@
 
        </div>
 
-    </div>
+    </main>
 @endsection

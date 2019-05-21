@@ -30,7 +30,10 @@
 </template>
 
 <style scoped>
+    
+
     .foot {
+        margin:0;
         display: flex;
         flex-direction: row;
         background: #FFA7A7;
@@ -46,6 +49,7 @@
 
     h3 {
         padding: 1rem 0;
+        font-weight: normal;
     }
     p {
         margin: 0;
