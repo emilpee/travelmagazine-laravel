@@ -4,9 +4,9 @@
 
 <div>
     <ul class="category-group">
-
-        <li class="list-group-item"> {{$category->name}} </li> 
-
+        @foreach ($category->articles as $article)
+            <li class="list-group-item"> {{$article}} </li> 
+        @endforeach
     </ul> 
 
 </div>

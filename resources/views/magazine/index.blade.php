@@ -96,7 +96,7 @@
                         {{--                    
          <ul class="list-group">
             @foreach ($articles as $article)
-            <li class="list-group-item"> {{$article->title}} </li>
+            <a href="{{ route('show', $article->article_id) }}" class="list-group-item"> {{$article->title}} </a>
             <li class="list-group-item"> {{$article->lead}} </li>
             @csrf          
             @endforeach
