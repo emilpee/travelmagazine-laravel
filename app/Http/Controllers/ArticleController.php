@@ -31,6 +31,7 @@ class ArticleController extends Controller
         ->get();
         $secondArticle = DB::table('articles')
         ->where('prio', '=', 2)
+        ->limit(6)
         ->get();
         $thirdArticle = DB::table('articles')
         ->where('prio', '=', 3)

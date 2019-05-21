@@ -28,77 +28,25 @@
             <input type="submit">
        </div>
 
-       <div class="articles">
-           <div class="box1">
-
-           @foreach ($secondArticle as $article)
-           <div class="artlead">
-           <div class="artimg"></div>
-            <div>
-                <h4>Titel {{$article->title}} </h4>
-                <h3>lead {{$article->lead}}</h3>
-                <p> prio {{$article->prio}}</p>
-            </div>
-           </div>
-           @endforeach
-           <div class="artlead">
-           <div class="artimg"></div>
-           <div>
-                <h4></h4>
-                <h3></h3>
-                <p></p>
-           </div>
-
-           </div>
-           
-           <div class="artlead">
-           <div class="artimg"></div>
-           <div>
-           <h4>jhfgjf</h4>
-               <h3>fhks</h3>
-               <p>khk</p>
-               </div>
-           </div>
-           </div>
-           <div class="box2">
-           
-           <div class="artlead">
-           <div class="artimg"></div>
-           <div>
-           <h4>jhfgjf</h4>
-               <h3>fhks</h3>
-               <p>khk</p>
-               </div>
-           </div>
-           
-           <div class="artlead">
-           <div class="artimg"></div>
-           <div>
-           <h4>jhfgjf</h4>
-               <h3>fhks</h3>
-               <p>khk</p>
-               </div>
-           </div>
-           
-           <div class="artlead">
-           <div class="artimg"></div>
-           <div>
-                <h4>jhfgjf</h4>
-               <h3>fhks</h3>
-               <p>khk</p>
-               </div>   
-           </div>
-           </div>
-       </div>
+    <div class="grid">
+    @foreach ($secondArticle as $article)
+        <article class="griditem">
+            <section class="img">
+            <img src="{{$article->img_url}}" style="width:100%;" alt="">
+            </section>
+            <section class="text">
+                <h1>{{$article->title}}</h1>
+                <p>{{$article->lead}}</p>
+            </section>
+        </article>
+    @endforeach
+    </div>
 
        <div class="ad"></div>
        <div class="ad"></div>
        <div class="ad"></div>
 
        <div class="flex">
-            <h2></h2>
-            <p></p>
-            <section class="tv">
                 <div class="imgtv">
                     <h2></h2>
                     <p></p>
@@ -116,19 +64,59 @@
         </ul>
                 </aside>
                     
-            </section>
        </div>
 
        <div class="big">
-        hej
+        
         </div>
 
        <div class="cat">
-        <h2></h2>
-        <p class="ingress"></p>
+        <h2>CATEGORIES</h2>
        </div>
 
        <div class="categories">
+           <a class="catimg" href="#">
+               <div>
+                   <h4></h4>
+                   <p></p>
+               </div>
+           </a>
+           <a class="catimg" href="#">
+               <div>
+                   <h4></h4>
+                   <p></p>
+               </div>
+           </a>
+           <a class="catimg" href="#">
+               <div>
+                   <h4></h4>
+                   <p></p>
+               </div>
+           </a>
+           <a class="catimg" href="#">
+               <div>
+                   <h4></h4>
+                   <p></p>
+               </div>
+           </a>
+           <a class="catimg" href="#">
+               <div>
+                   <h4></h4>
+                   <p></p>
+               </div>
+           </a>
+           <a class="catimg" href="#">
+               <div>
+                   <h4></h4>
+                   <p></p>
+               </div>
+           </a>
+           <a class="catimg" href="#">
+               <div>
+                   <h4></h4>
+                   <p></p>
+               </div>
+           </a>
 
        </div>
 

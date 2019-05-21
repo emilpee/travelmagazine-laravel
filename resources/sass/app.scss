@@ -17,9 +17,7 @@ html {
 body {
     background: $background;
     margin:0;
-    max-width: 100vw;
-    width: 100%;
-    padding: 0;
+
 
     #app {
 
@@ -77,14 +75,14 @@ body {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             grid-template-rows: ($baseline*7) ($baseline*0.6) ($baseline*2.9) 
-            ($baseline*0.7) ($baseline*8) ($baseline*6) ($baseline*3) 
-            $baseline $baseline $baseline;
+            ($baseline*0.7) ($baseline*12) ($baseline*9) ($baseline*4) 
+            ($baseline*3) ($baseline*5);
             grid-template-areas: 
             "mimg mimg mimg mimg mimg mimg mimg"
             ". . . tag . . . "
             ". mhead mhead mhead mhead mhead ."
             "search search search search search searchbtn ad"
-            "articles articles articles articles articles articles ad"
+            "agrid agrid agrid agrid agrid agrid ad"
             "flex flex flex flex flex flex flex"
             "big big big big big big big"
             "cat cat cat cat cat cat cat"
@@ -132,6 +130,7 @@ body {
                 grid-area: searchbtn;
                 background: white;
                 margin-bottom: .4rem;
+                margin-right: 1.5rem;
                 input[type=submit]{
                     width: 100%;
                     height: 100%;
@@ -140,50 +139,37 @@ body {
                 }
             }
 
-            .articles {
-                grid-area: articles;
-                display: flex;
-                flex-direction: column;
-                
+            .grid {
+                grid-area: agrid;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 1rem;
+                margin-right: 1.5rem;
+          
+                .griditem {
+                  background: cyan;
+                  display: flex;
+                  flex-direction: column;
+          
+                  .img {
+                    background: lightblue;
+                    height: 2rem;
+                    flex: 1;
+                  }
+          
+                  .text {
+                    background: white;
+                    height: 2rem;
+                    flex:1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: left;
+                    align-items: left;
+                    padding: 1rem;
+                }
+              }
+            }  
 
-                .box1{
-                    display: flex;
-                    flex-direction: row;
-                    width: 100%;
-                    height: 100%;
-                    background: green;
-                    margin-left: 1rem; 
-                    .artlead {
-                        width: 10rem;
-                        height: 10rem;
-                        
-                        background: lime;
-                        display: flex;
-                        flex: column;
-                        .artimg{
-                            
-                        }
-                    }
-                }
-                .box2 {
-                    display: flex;
-                    flex-direction: row;  
-                    width: 100%;
-                    height: 100%;
-                    margin-top: 1rem;
-                    background: red;
-                    
-                    .artlead {
-                        width: 10rem;
-                        height: 10rem;
-                        background: rebeccapurple;
-                        display: flex;
-                        flex: column;
-                        
-                    }
-                }
-                
-            }
 
             .ad {
                 grid-area: ad;
@@ -193,37 +179,77 @@ body {
             .flex {
                 margin: 1rem 0;
                 grid-area: flex;
-                background: pink;
-                .tv {
+                display: flex;
+                margin-top: 3rem;
+                    .imgtv {
+                        background: lightblue;
+                        flex:2;
+                    }
                     .list {
-                        
+                        background:white;
+                        flex: 1;
                         ul{
                             //max-height: 600px;
                             li{
                                font-size: 0.5rem; 
-                                overflow: hidden;
+                               overflow-y: scroll;
+                                
                             }
                         }
                     }
-                }
+                
 
             }
             .big{
                 grid-area: big;
                 background: blue;
+                margin-top: 2rem;
             }
             .cat{
                 grid-area: cat;
-                background: rebeccapurple;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
             }
             .categories {
                     grid-area: catego;
-                    background: violet;
+                    display: flex;
+                    margin-bottom: 2rem;
+
+                    .catimg {
+                        background:white;
+                        flex:1;
+                        height: 100%;
+                        width: 3rem;
+                        margin-right: 1rem;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                    }
             }
+<<<<<<< HEAD
         }
+=======
 
 
 
+
+
+
+
+
+
+        }   
+>>>>>>> f9c67592aa1cc7c6aaae809b56db82eec7f1c3fa
+
+
+
+        }
     }
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> f9c67592aa1cc7c6aaae809b56db82eec7f1c3fa
