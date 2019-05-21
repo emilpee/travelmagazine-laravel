@@ -12,17 +12,28 @@
 <body class="container">
 <div id="app">
     <div class="navbar">
-    <router-view name="MagazineHeader"></router-view>
+
+        <div class="nav-btn">
+            <!-- icon -->
+            <a href="{{ url('/') }}">Home</a>
+            <a href="{{ url('/categories') }}">Categories</a>
+        </div>
 
             @if (Route::has('login'))
                 <div class="login-btn">
-                    @auth
-                        <!-- Edit ska bara gå att komma åt som admin-->
-                        @can('superuser-only')
-                        <a href="{{ url('/edit') }}">Edit</a>
-                        @endcan
+                    @auth 
+                    <a href="{{ route('home') }}">Dashboard</a>
+    
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
 
-                        <a href="{{ url('/') }}">Home</a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                
+                                                
                     @else
                         <a href="{{ route('login') }}">Login</a>
 

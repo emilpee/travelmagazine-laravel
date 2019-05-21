@@ -86,7 +86,7 @@ class ArticleController extends Controller
 
         $article->save();
 
-        return redirect('magazine.editArticle');
+        return redirect('magazine.edit');
     }
 
     /**
