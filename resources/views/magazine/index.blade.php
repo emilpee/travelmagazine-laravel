@@ -1,17 +1,25 @@
 @extends ('magazine.layout')
 
 @section('main')
-
     <main class="wrapper">
 
-        <div class="mainimg"></div>
+        <div class="mainimg">
+            
+        </div>
         <div class="tag">
             <h2>Go Europe</h2>
         </div>
         <div class="mainheader">
-            <h1>Manarola, Italy</h1>
+        @foreach ($mainArticle as $article)
+     
+            <h1>{{$article->title}}</h1>
+            <h3>{{$article->lead}}</h3>
+            <p>{{$article->prio}}</p>
+
+        @endforeach
         </div>
-        
+    
+
        <div class="search">
            <input type="text">
            
@@ -22,21 +30,24 @@
 
        <div class="articles">
            <div class="box1">
-           
+
+           @foreach ($secondArticle as $article)
            <div class="artlead">
            <div class="artimg"></div>
             <div>
-               <h4>jhfgjf</h4>
-               <h3>fhks</h3>
-               <p>khk</p>
-               </div>
+                <h4>Titel {{$article->title}} </h4>
+                <h3>lead {{$article->lead}}</h3>
+                <p> prio {{$article->prio}}</p>
+            </div>
            </div>
+           @endforeach
            <div class="artlead">
            <div class="artimg"></div>
-           <h4>jhfgjf</h4>
-               <h3>fhks</h3>
-               <p>khk</p>
-           <div></div>
+           <div>
+                <h4></h4>
+                <h3></h3>
+                <p></p>
+           </div>
 
            </div>
            
@@ -93,14 +104,16 @@
                     <p></p>
                 </div>
                 <aside class="list">
-                        {{--                    
+                                            
          <ul class="list-group">
-            @foreach ($articles as $article)
+         @foreach ($thirdArticle as $article)
+  
             <a href="{{ route('show', $article->article_id) }}" class="list-group-item"> {{$article->title}} </a>
-            <li class="list-group-item"> {{$article->lead}} </li>
-            @csrf          
-            @endforeach
-        </ul> --}}
+            <li class="list-group-item"> {{$article->lead}} </li>        
+           
+
+           @endforeach
+        </ul>
                 </aside>
                     
             </section>

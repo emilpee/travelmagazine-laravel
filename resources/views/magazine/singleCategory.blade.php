@@ -2,13 +2,19 @@
 
 @section('main')
 
+@foreach ($category->articles as $article)
 <div>
-    <ul class="category-group">
-        @foreach ($category->articles as $article)
-            <li class="list-group-item"> {{$article}} </li> 
-        @endforeach
-    </ul> 
+
+
+    <article>
+        <a href="{{ route('show', $article->article_id) }}">
+            <img src="{{$article->img_url}}" alt="Archive picture">
+            <h1>{{$article->title}}</h1>
+            <p>{{$article->lead}}</p>
+        </a>
+    </article> 
+
 
 </div>
-
+@endforeach
 @endsection 

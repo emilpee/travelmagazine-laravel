@@ -23,6 +23,18 @@ body {
 
     #app {
 
+        div {
+
+            
+            .lock {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 3rem;
+                border: 1px solid black;
+            }
+        }
+
         .navbar {
             margin: 0;
             display: flex;
@@ -32,8 +44,6 @@ body {
             background: $background;
 
             .nav-btn {
-                
-               
                 font-size: 1.4rem;
                 
                 .logo {
@@ -42,6 +52,7 @@ body {
                 padding: 1rem;
                 }
             }
+            
             & .login-btn {
                 flex: 1;
                 align-items: flex-end; 
@@ -209,16 +220,7 @@ body {
                     grid-area: catego;
                     background: violet;
             }
-
-
-
-
-
-
-
-
-
-    }
+        }
 
 
 

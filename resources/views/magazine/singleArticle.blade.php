@@ -6,19 +6,19 @@
     <a href="{{ route('edit', $article->article_id) }}">Edit</a>
 @endcan
     <div>
+        <img src="{{$article->img_url}}" alt="Archive picture">
         <h1 class="jumbotron">{{$article->title}}</h1>
         <h3>{{$article->lead}}</h3>
         @auth
 
         <p>{{$article->bodytext}}</p>
-        <img alt="Artikelbild" src={{$article->img_url}} />
     </div>
 @endauth
 
 
 <!-- Show only if you are not logged in at the bottom of the page -->
 @if (Route::has('login'))
-    <div class="login-btn">
+    <div class="lock">
         @auth 
             
         @else
