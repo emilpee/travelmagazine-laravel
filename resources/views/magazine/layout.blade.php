@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <title>Taravel</title>
+    <link rel="shortcut icon" href="{{ asset('favicon.png') }}" type="image">
+    
+    <title>GO!</title>
 </head>
 <body class="container">
 <div id="app">
