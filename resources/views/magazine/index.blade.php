@@ -80,9 +80,11 @@
            </div>
        </div>
 
-       <div class="ad"></div>
-       <div class="ad"></div>
-       <div class="ad"></div>
+        @foreach ($ads as $ad)
+            <div class="ad">{{$ad}}</div>
+            <div class="ad"></div>
+            <div class="ad"></div>
+       @endforeach
 
        <div class="flex">
             <h2></h2>
@@ -92,15 +94,15 @@
                     <h2></h2>
                     <p></p>
                 </div>
+                
                 <aside class="list">
-                        {{--                    
-         <ul class="list-group">
-            @foreach ($articles as $article)
-            <a href="{{ route('show', $article->article_id) }}" class="list-group-item"> {{$article->title}} </a>
-            <li class="list-group-item"> {{$article->lead}} </li>
-            @csrf          
-            @endforeach
-        </ul> --}}
+                               
+                    <ul class="list-group">
+                        @foreach ($articles as $article)
+                            <li class="list-group-item"> {{$article->title}} </li>     
+                        @endforeach
+                    </ul> 
+
                 </aside>
                     
             </section>
