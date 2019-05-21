@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Ads;
 use Illuminate\Http\Request;
 
 class AdsController extends Controller
@@ -13,7 +14,10 @@ class AdsController extends Controller
      */
     public function index()
     {
-        //
+        $ads = Ads::all();
+        return view('magazine.layout', [
+            'ads' => $ads
+        ]);
     }
 
     /**

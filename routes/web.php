@@ -18,6 +18,7 @@ Route::resource('/categories', 'CategoryController');
 Route::get('/categories/{id}', 'CategoryController@show');
 
 Route::resource('/', 'ArticleController');
+Route::get('/', 'AdsController@index');
 Route::get('/{id}', 'ArticleController@show'); 
 Route::post('/{id}/edit','ArticleController@update')->name('update');
 Route::get('/{id}/edit', 'ArticleController@edit');
