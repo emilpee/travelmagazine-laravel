@@ -6211,7 +6211,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.container[data-v-f3280c0c] {\n    display: flex;\n    flex-direction: row;\n    background: #eee;\n    width: 100%;\n}\nsection[data-v-f3280c0c] {\n    flex: 1;\n    text-align: center;\n    background: green;\n}\n.contact[data-v-f3280c0c] {\n    border-left: 1px solid black;\n    border-right: 1px solid black;\n}\nh3[data-v-f3280c0c] {\n    padding: 2rem;\n}\n", ""]);
+exports.push([module.i, "\n.foot[data-v-f3280c0c] {\n    margin:0;\n    display: flex;\n    flex-direction: row;\n    background: #FFA7A7;\n    max-width: 100vw;\n    width: 100%;\n}\nsection[data-v-f3280c0c] {\n    flex: 1;\n    text-align: left;\n    padding: 1rem;\n}\nh3[data-v-f3280c0c] {\n    padding: 1rem 0;\n    font-weight: normal;\n}\np[data-v-f3280c0c] {\n    margin: 0;\n}\n#submit[data-v-f3280c0c] {\n    color: grey;\n    text-decoration: none;\n    border: rgb(80, 79, 79) 1px solid;\n}\n#submit[data-v-f3280c0c]:hover {\n    background: rgb(65, 59, 59);\n}\n#checkbox_news[data-v-f3280c0c]{\n    display: none;\n}\n.checkbox label[data-v-f3280c0c]::before{\ncontent: \"\";\nbackground: white;\ndisplay: inline-block;\nheight: 16px;\nwidth: 16px;\nborder: 1px solid;\nmargin: 0 .6rem  0 0;\n}\n.checkbox label[data-v-f3280c0c]::after {\n    background: #FFA7A7;\n}\n.contact[data-v-f3280c0c] {\n    border-left: 1px solid black;\n    border-right: 1px solid black;\n}\nh3[data-v-f3280c0c] {\n    padding: 2rem;\n}\n", ""]);
 
 // exports
 
@@ -37705,23 +37705,37 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("article", { staticClass: "container" }, [
+    return _c("div", { staticClass: "foot" }, [
       _c("section", [
-        _c("h3", [_vm._v("About ")]),
+        _c("h3", [_vm._v("Get the news first")]),
         _vm._v(" "),
-        _c("p", [_vm._v("aodashdaosihdhadhiaoi")])
+        _c("label", [
+          _vm._v("Email\n        "),
+          _c("input", { attrs: { type: "email", id: "email" } }),
+          _c("br")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "checkbox" }, [
+          _c("input", { attrs: { type: "checkbox", id: "checkbox_news" } }),
+          _vm._v(" "),
+          _c("label", { attrs: { for: "checkbox_news" } }, [
+            _vm._v("I agree with all condition")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("input", { attrs: { type: "submit", id: "submit" } })
       ]),
       _vm._v(" "),
       _c("section", [
         _c("h3", [_vm._v("Contact Us")]),
         _vm._v(" "),
-        _c("ul", [
-          _c("li", [_vm._v("Kruthusgatan 17, 411 04 Göteborg.")]),
-          _vm._v(" "),
-          _c("li", [_vm._v("Tel:")]),
-          _vm._v(" "),
-          _c("li", [_vm._v("E-mail:")])
-        ])
+        _c("p", [_vm._v("Kruthusgatan 17")]),
+        _vm._v(" "),
+        _c("p", [_vm._v("411 04 Göteborg")]),
+        _vm._v(" "),
+        _c("p", [_vm._v("Tel: 0022-22000")]),
+        _vm._v(" "),
+        _c("p", [_vm._v("E-mail: info@taravel.com")])
       ]),
       _vm._v(" "),
       _c("section", [
@@ -52770,8 +52784,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Applications/MAMP/htdocs/travelmagazine-laravel/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/travelmagazine-laravel/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\TravelMagazine\travelmagazine-laravel\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\TravelMagazine\travelmagazine-laravel\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

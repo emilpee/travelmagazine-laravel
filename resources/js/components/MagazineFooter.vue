@@ -1,16 +1,22 @@
 <template>
-    <article class="container">
+    <div class="foot">
         <section>
-            <h3>About </h3>
-            <p>aodashdaosihdhadhiaoi</p>
+            <h3>Get the news first</h3>
+            <label>Email
+            <input type="email" id="email"><br>
+            </label>
+            <div class="checkbox">
+                <input type="checkbox" id="checkbox_news">
+                <label for="checkbox_news">I agree with all condition</label>
+            </div>
+            <input type="submit" id="submit">
         </section>
         <section>
             <h3>Contact Us</h3>
-            <ul>
-                <li>Kruthusgatan 17, 411 04 Göteborg.</li>
-                <li>Tel:</li>
-                <li>E-mail:</li>
-            </ul>
+            <p>Kruthusgatan 17</p>
+            <p>411 04 Göteborg</p>
+            <p>Tel: 0022-22000</p>
+            <p>E-mail: info@taravel.com</p>
         </section>
         <section>
             <h3>Follow Us</h3>
@@ -20,28 +26,66 @@
                 <li>Twitter</li>
             </ul>
         </section>
-    </article>
+    </div>
 </template>
 
 <style scoped>
-    .container {
+    
+
+    .foot {
+        margin:0;
         display: flex;
         flex-direction: row;
-        background: #eee;
+        background: #FFA7A7;
+        max-width: 100vw;
         width: 100%;
     }
 
     section {
         flex: 1;
-        text-align: center;
-        background: green;
+        text-align: left;
+        padding: 1rem;
     }
 
+    h3 {
+        padding: 1rem 0;
+        font-weight: normal;
+    }
+    p {
+        margin: 0;
+    }
+
+    #submit {
+        color: grey;
+        text-decoration: none;
+        border: rgb(80, 79, 79) 1px solid;
+
+    }
+    #submit:hover {
+        background: rgb(65, 59, 59);  
+    }
+   
+    #checkbox_news{
+        display: none;
+    }
+
+    .checkbox label::before{
+    content: "";
+    background: white;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    border: 1px solid;
+    margin: 0 .6rem  0 0;
+    }
+    .checkbox label::after {
+        background: #FFA7A7;
+    }
     .contact {
         border-left: 1px solid black;
         border-right: 1px solid black;
+        
     }
-
     h3 {
         padding: 2rem;
     }
