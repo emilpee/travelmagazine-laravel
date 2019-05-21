@@ -15,9 +15,11 @@ public/categories#/2/2
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::resource('/categories', 'CategoryController');
+/* Route::resource('/categories', 'CategoryController');
 Route::get('/categories/{id}', 'CategoryController@show');
+ */
+Route::get('/', 'ArticleController@home');
+Route::resource('/articles', 'ArticleController');
 
-Route::resource('/', 'ArticleController');
-Route::get('/{id}', 'ArticleController@show');
+Route::get('/articles/{id}', 'ArticleController@show');
 

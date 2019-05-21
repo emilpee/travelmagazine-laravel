@@ -13,12 +13,15 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function home()
+    {
+        return view('vueapp');
+    }
+
     public function index()
     {
-        $articles = Article::all();
-        return view('magazine.index', [
-            'articles' => $articles
-        ]);
+        return Article::orderBy('article_id')->get();
     }
 
     /**
@@ -50,10 +53,8 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        $article = Article::findOrFail($id);
-        return view('magazine.singleArticle', [
-            'article' => $article
-        ]);
+        return Article::findOrFail($id);
+        
     }
 
     /**
@@ -64,10 +65,8 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        $article = Article::find($id);
-        return view('magazine.edit', [
-            'article' => $article
-        ]);
+        return Article::find($id);
+         
     }
 
     /**
@@ -79,17 +78,26 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'title' => 'required',
+            'lead' => 'required',
+            'bodytext' => 'required',
+            'prio' => 'required',
+            'img_url' => 'required',
+            'author' => 'required',
+            'category' => 'required'
+        ]);
+
         $article = Article::find($id);
-        $article->title = Input::get('title');
-        $article->lead = Input::get('lead');
-        $article->bodytext = Input::get('bodytext');
-        $article->category_id = Input::get('category_id');
-        $article->img_url = Input::get('img_url');
-        $article->prio = Input::get('prio');
+        if($article->count()){
+            $article->update($request->all());
+            return response()->json(['status' => 'success', 'msg' => 'Article updated']);
+        } else {
+            return response()->json(['status' => 'error', 'msg' => 'Article not updated']);
+            
+        }
 
-        $article->save();
-
-        return redirect('magazine.edit');
+   
     }
 
     /**
