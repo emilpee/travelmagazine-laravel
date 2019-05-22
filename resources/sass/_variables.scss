@@ -7,14 +7,16 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 $baseline: 4rem;
-%center{
+
+%center {
     display: flex;
     justify-content: center;
     align-items: center;
-   }
+}
 
 
 $pig:#FFA7A7;
+$darkpig: rgb(230, 139, 139);
 // Colors
 $blue: #3490dc;
 $indigo: #6574cd;
