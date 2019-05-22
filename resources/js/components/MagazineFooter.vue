@@ -46,12 +46,13 @@
         text-align: left;
         padding: 1rem;
         display: flex;
-        align-items: baseline;
+        align-items: center;
         flex-direction: column;
     }
 
     h3 {
         font-weight: normal;
+        padding: 0 !important;
     }
     p {
         margin: 0;
@@ -90,5 +91,9 @@
     }
     h3 {
         padding: 2rem;
+    }
+    ul {
+        list-style: none;
+        padding: 0;
     }
 </style>

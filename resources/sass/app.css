@@ -13,9 +13,28 @@ html body #app .wrapper .mainheader, html body #app .wrapper .tag {
           align-items: center;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
 :root {
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', sans-serif;
   font-weight: normal;
+}
+
+h1 {
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 1.3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1rem;
 }
 
 html {
@@ -98,13 +117,9 @@ html body #app .wrapper {
   display: grid;
   -ms-grid-columns: (1fr)[7];
       grid-template-columns: repeat(7, 1fr);
-  -ms-grid-rows: 28rem 2.4rem 11.6rem 2.8rem 48rem 36rem 16rem 12rem 20rem;
-      grid-template-rows: 28rem 2.4rem 11.6rem 2.8rem 48rem 36rem 16rem 12rem 20rem;
-      grid-template-areas: "mimg mimg mimg mimg mimg mimg mimg" ". . . tag . . . " ". mhead mhead mhead mhead mhead ." "search search search search search searchbtn ad" "agrid agrid agrid agrid agrid agrid ad" "flex flex flex flex flex flex flex" "big big big big big big big" "cat cat cat cat cat cat cat" "catego catego catego catego catego catego catego";
-}
-
-html body #app .wrapper img {
-  width: 100%;
+  -ms-grid-rows: 40rem 2.4rem 11.6rem 4.8rem 68rem 36rem 16rem 12rem 20rem;
+      grid-template-rows: 40rem 2.4rem 11.6rem 4.8rem 68rem 36rem 16rem 12rem 20rem;
+      grid-template-areas: "mimg mimg mimg mimg mimg mimg mimg" ". . . tag . . . " ". mhead mhead mhead mhead mhead ." "search search search search search searchbtn ad" "agrid agrid agrid agrid agrid agrid ad" "flex flex flex flex flex flex flex" "big big big big big big big" "cat cat cat cat cat cat cat" "catego catego catego catego catego catego catego";
 }
 
 html body #app .wrapper .mainimg {
@@ -113,6 +128,13 @@ html body #app .wrapper .mainimg {
   -ms-grid-column-span: 7;
   grid-area: mimg;
   background: lightblue;
+  overflow: hidden;
+}
+
+html body #app .wrapper .mainimg img {
+  max-width: 93vw;
+  min-width: 93vw;
+  width: 100%;
 }
 
 html body #app .wrapper .mainheader {
@@ -124,6 +146,15 @@ html body #app .wrapper .mainheader {
   -webkit-transform: translateY(-8rem);
           transform: translateY(-8rem);
   text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem;
+  text-align: center;
 }
 
 html body #app .wrapper .tag {
@@ -147,7 +178,7 @@ html body #app .wrapper .search {
   -ms-grid-column-span: 5;
   grid-area: search;
   background: white;
-  margin-bottom: .4rem;
+  margin-bottom: 1.4rem;
 }
 
 html body #app .wrapper .search input[type=text] {
@@ -161,7 +192,7 @@ html body #app .wrapper .searchbtn {
   -ms-grid-column: 6;
   grid-area: searchbtn;
   background: white;
-  margin-bottom: .4rem;
+  margin-bottom: 1.4rem;
   margin-right: 1.5rem;
 }
 
@@ -178,14 +209,14 @@ html body #app .wrapper .grid {
   grid-area: agrid;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
   margin-right: 1.5rem;
 }
 
 html body #app .wrapper .grid .griditem {
-  background: cyan;
+  background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,16 +227,14 @@ html body #app .wrapper .grid .griditem {
 }
 
 html body #app .wrapper .grid .griditem .img {
-  background: lightblue;
-  height: 2rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  width: 100%;
 }
 
 html body #app .wrapper .grid .griditem .text {
   background: white;
-  height: 2rem;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -223,6 +252,9 @@ html body #app .wrapper .grid .griditem .text {
       -ms-flex-align: left;
           align-items: left;
   padding: 1rem;
+  min-height: 12rem;
+  max-height: 12rem;
+  height: 100%;
 }
 
 html body #app .wrapper .ad {
@@ -230,8 +262,13 @@ html body #app .wrapper .ad {
   -ms-grid-row-span: 2;
   -ms-grid-column: 7;
   grid-area: ad;
-  background: orange;
-  margin-left: .4rem;
+  margin-left: 2rem;
+}
+
+html body #app .wrapper .ad img {
+  max-width: 14vw;
+  min-width: 14vw;
+  width: 100%;
 }
 
 html body #app .wrapper .flex {
@@ -251,6 +288,26 @@ html body #app .wrapper .flex .imgtv {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+html body #app .wrapper .flex .imgtv .box {
+  background: rgba(53, 53, 53, 0.767);
+  padding: 1rem;
+  width: 100%;
+}
+
+html body #app .wrapper .flex .imgtv h2 {
+  color: white;
+}
+
+html body #app .wrapper .flex .imgtv p {
+  color: white;
 }
 
 html body #app .wrapper .flex .list {
@@ -258,6 +315,7 @@ html body #app .wrapper .flex .list {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  overflow-y: scroll;
 }
 
 html body #app .wrapper .flex .list ul li {
@@ -302,16 +360,102 @@ html body #app .wrapper .categories {
 }
 
 html body #app .wrapper .categories .catimg {
-  background: white;
+  background: gold;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  height: 100%;
   width: 3rem;
   margin-right: 1rem;
 }
 
+html body #app .wrapper .categories .catimg .img {
+  background-size: cover;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+html body #app .wrapper .categories .catimg .img h4 {
+  margin-top: 0;
+  padding: 0 1rem;
+  color: white;
+  margin: 0;
+}
+
+html body #app .wrapper .categories .catimg .img p {
+  font-size: .8rem;
+  color: white;
+  padding: 0 1rem;
+  margin: .6rem 0;
+}
+
 html body #app .wrapper .categories .catimg:last-child {
   margin-right: 0;
+}
+
+html body #app .second {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem 3rem;
+}
+
+html body #app .second .griditem {
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: red;
+  max-width: 10px;
+  min-width: 10px;
+  width: 100%;
+}
+
+html body #app .second .griditem .img {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-size: cover;
+  max-width: 10px;
+  min-width: 10px;
+  width: 100%;
+}
+
+html body #app .second .griditem .text {
+  background: white;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  padding: 1rem;
+  min-height: 12rem;
+  max-height: 12rem;
+  height: 100%;
 }
 /*# sourceMappingURL=app.css.map */

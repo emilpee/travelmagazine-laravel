@@ -14,9 +14,9 @@
           <a href="{{ route ('show',  $article->article_id) }}">
             <h1>{{$article->title}}</h1>
             <h3>{{$article->lead}}</h3>
-          </a>
-        @endforeach
         </div>
+    @endforeach
+        
     
 
        <div class="search">
@@ -31,8 +31,8 @@
     @foreach ($secondArticle as $article)
     <a href="{{ route ('show',  $article->article_id) }}">
         <article class="griditem">
-            <section class="img">
-            <img src="{{$article->img_url}}" style="width:100%;" alt="">
+            <section class="img" style="background-image:url({{$article->img_url}});">
+            {{-- <img src="{{$article->img_url}}" style="width:100%;" alt=""> --}}
             </section>
             <section class="text">
                 <h1>{{$article->title}}</h1>
@@ -53,25 +53,22 @@
        <div class="flex">
             @foreach ($thirdChosenArticle as $article)
                 <div class="imgtv" style="background: url( {{$article->img_url}} ); background-size:cover;">
-                    <a href="{{ route ('show',  $article->article_id) }}">
-                        <h2>{{$article->title}}</h2>
-                        <p>{{$article->lead}}</p>
-                    </a>        
+                    <div class="box">
+                        <a href="{{ route ('show',  $article->article_id) }}">
+                            <h2>{{$article->title}}</h2>
+                            <p>{{$article->lead}}</p>
+                        </a> 
+                    </div>       
                 </div>
             @endforeach
             
-        <aside class="list">
-                                            
+        <aside class="list">                                         
             <ul class="list-group">
-                @foreach ($thirdArticle as $article)
-        
+                @foreach ($thirdArticle as $article)       
                     <a href="{{ route('show', $article->article_id) }}" class="list-group-item"> {{$article->title}} </a>
-                    <li class="list-group-item"> {{$article->lead}} </li>        
-                
-
+                    <hr>           
                 @endforeach
             </ul>
-
         </aside>
                     
        </div>
@@ -87,8 +84,7 @@
        <div class="categories">
        @foreach ($categories as $category)
            <a class="catimg" href="#">
-               <img src="{{$category->img_url}}" alt="{{$category->name}}">
-               <div>
+               <div class="img" style="background-image: url({{$category->img_url}});">
                    <h4>{{$category->name}}</h4>
                    <p>{{$category->text}}</p>
                </div>
