@@ -78,12 +78,28 @@ html body #app .navbar {
   display: flex;
   flex-direction: row;
   padding: 2rem 1rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   background: #e5e5e5;
 }
 
-html body #app .navbar .nav-btn {
-  font-size: 1.4rem;
+html body #app .navbar .nav-btn .navLink {
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+
+html body #app .navbar .nav-btn .navLink.loginBtn {
+  border-left: 1px solid black;
+  margin: 0 0 0 2rem;
+  padding: 0 0 0 2rem;
+  color: #e68b8b;
+}
+
+html body #app .navbar .nav-btn .navLink.registerBtn {
+  color: #e68b8b;
+}
+
+html body #app .navbar .nav-btn .navLink:hover {
+  color: #FFA7A7;
 }
 
 html body #app .navbar .nav-btn .logo {
@@ -92,20 +108,7 @@ html body #app .navbar .nav-btn .logo {
   padding: 1rem;
 }
 
-html body #app .navbar .login-btn {
-  flex: 1;
-  align-items: flex-end;
-  justify-content: flex-end;
-  text-align: right;
-}
-
-html body #app .navbar a {
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-html body #app .navbar :hover {
+html body #app .navbar .nav-btn .logo:hover {
   color: #FFA7A7;
 }
 

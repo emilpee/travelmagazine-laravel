@@ -56,34 +56,41 @@ body {
             display: flex;
             flex-direction: row;
             padding: 2rem 1rem;
-            font-size: 1rem;
+            font-size: 1.2rem;
             background: $background;
 
             .nav-btn {
-                font-size: 1.4rem;
+
+                .navLink {
+                    margin: 0 1rem;
+                    text-transform: uppercase;
+
+                    &.loginBtn {
+                        border-left: 1px solid black;
+                        margin: 0 0 0 2rem;
+                        padding: 0 0 0 2rem;
+                        color: $darkpig;
+                    }
+
+                    &.registerBtn {
+                        color: $darkpig;
+                    }
+
+                    &:hover {
+                        color: $pig;
+                    }
+                }
                 
                 .logo {
-                font-family: 'Pattaya', sans-serif;
-                font-size:3rem;
-                padding: 1rem;
+                    font-family: 'Pattaya', sans-serif;
+                    font-size:3rem;
+                    padding: 1rem;
+                    &:hover {
+                        color: $pig;
+                    }
                 }
             }
             
-            & .login-btn {
-                flex: 1;
-                align-items: flex-end; 
-                justify-content: flex-end;
-                text-align: right;
-            }
-            & a {
-                color: rgb(0, 0, 0);
-                text-decoration: none;
-                text-transform: uppercase;
-    
-            }
-            & :hover {
-                color: $pig;
-            }
         }
 
 

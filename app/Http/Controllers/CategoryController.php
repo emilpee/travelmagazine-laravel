@@ -16,7 +16,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('magazine.categories', [
+        return view('magazine.layout', [
             'categories' => $categories
         ]);
     }
@@ -50,9 +50,11 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
+        $categories = Category::all();
         $category = Category::findOrFail($id);
         return view('magazine.singleCategory', [
-            'category' => $category
+            'category' => $category,
+            'categories' => $categories
         ]);
     }
 

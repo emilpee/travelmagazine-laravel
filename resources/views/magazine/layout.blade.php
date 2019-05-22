@@ -16,17 +16,16 @@
 
         <div class="nav-btn">
             <a href="{{ url('/') }}" class="logo">GO!</a>
-                      
-            <a href="{{ url('/categories') }}">Categories</a>
-            @yield('navbar')
-        </div>
+                    
+            @foreach ($categories as $category)
+                <a href="{{ route('categories.show', $category->category_id) }}" class="navLink"> {{$category->name}} </a> 
+            @endforeach
 
             @if (Route::has('login'))
-                <div class="login-btn">
+            
                     @auth 
-                    <a href="{{ route('home') }}">Dashboard</a>
     
-                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                        <a class="navLink loginBtn" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
@@ -37,15 +36,22 @@
                 
                                                 
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a class="navLink loginBtn" href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a class="navLink registerBtn" href="{{ route('register') }}">Register</a>
                         @endif
 
                     @endauth
-                </div>
+          
             @endif
+            
+    
+
+            
+        </div>
+
+            
         </div>
 @yield('main')
 

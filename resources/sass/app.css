@@ -95,12 +95,28 @@ html body #app .navbar {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 2rem 1rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   background: #e5e5e5;
 }
 
-html body #app .navbar .nav-btn {
-  font-size: 1.4rem;
+html body #app .navbar .nav-btn .navLink {
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+
+html body #app .navbar .nav-btn .navLink.loginBtn {
+  border-left: 1px solid black;
+  margin: 0 0 0 2rem;
+  padding: 0 0 0 2rem;
+  color: #e68b8b;
+}
+
+html body #app .navbar .nav-btn .navLink.registerBtn {
+  color: #e68b8b;
+}
+
+html body #app .navbar .nav-btn .navLink:hover {
+  color: #FFA7A7;
 }
 
 html body #app .navbar .nav-btn .logo {
@@ -109,26 +125,7 @@ html body #app .navbar .nav-btn .logo {
   padding: 1rem;
 }
 
-html body #app .navbar .login-btn {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  text-align: right;
-}
-
-html body #app .navbar a {
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-html body #app .navbar :hover {
+html body #app .navbar .nav-btn .logo:hover {
   color: #FFA7A7;
 }
 
