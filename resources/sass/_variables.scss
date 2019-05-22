@@ -4,14 +4,16 @@ $background:#e5e5e5;
 
 
 $baseline: 4rem;
-%center{
+
+%center {
     display: flex;
     justify-content: center;
     align-items: center;
-   }
+}
 
 
 $pig:#FFA7A7;
+$darkpig: rgb(230, 139, 139);
 // Colors
 $blue: #3490dc;
 $indigo: #6574cd;

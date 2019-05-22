@@ -1,4 +1,4 @@
-// Fonts
+    // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Pattaya&display=swap');
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap");
@@ -14,7 +14,7 @@ html {
     padding: 0;
 body {
     background: $background;
-    margin:0;
+    margin: 0;
 
    
 
@@ -329,7 +329,160 @@ body {
         
     } 
 
-}
+        /* Single article */
+        .singleArticle {
+            background: #eee;
+            display: flex;
+            justify-content: center;
+            padding: 5rem;
+            margin: 4rem;
+            flex-direction: column;
+
+            .jumbotron {
+                @extend %center;
+            }
+
+            h3 {
+                @extend %center;
+            }
+
+            p {
+                line-height: 1.8em;
+                padding: 0 3rem 0 0;
+            }
+
+            
+            .randompic {
+                margin: auto;
+                padding: 1rem;
+                height: auto;
+            }
+            
+            .byline {
+                display: flex;
+                margin-top: 1.5rem;
+                justify-content: space-between;
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+                padding: 1rem 0;
+
+                small {
+                    text-align: right;
+                    font-style: italic;
+                }
+            }
+
+
+            .editLink {
+                text-decoration: none;
+                background: $orange;
+                color: #fff;
+                padding: 1.5rem;
+                border: 1px solid $orange;
+                margin-top: 1.5rem;
+                border-radius: 6px;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: .15rem;
+                transition: all .3s ease;
+
+                &:hover {
+                    border: 1px solid $orange;
+                    background: #fff;
+                    color: $orange;
+                }
+                  
+            }
+        }
+
+        /* Edit page */
+        form {
+            background: #eee;
+            padding: 3rem;
+            margin: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 15px;
+            grid-template-areas: 
+            "prio img cat"
+            "author author author"
+            "title title title"
+            "lead lead lead"
+            "body body body"
+            ". submit .";
+
+            .form-group {
+                display: grid;
+
+                input[type=text], textarea {
+                    padding: .5rem;
+                    border-radius: 4px;
+                    border:none;
+                }
+
+                label {
+                    font-weight: 700;
+                    color: $darkpig;
+                    text-transform: uppercase;
+                    letter-spacing: .02rem;
+                }
+
+                input[type=submit] {
+                    text-decoration: none;
+                    background: $orange;
+                    color: #fff;
+                    padding: 1.5rem;
+                    border: 1px solid $orange;
+                    margin-top: 1.5rem;
+                    border-radius: 6px;
+                    font-weight: 700;
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: .15rem;
+                    transition: all .3s ease;
+        
+                    &:hover {
+                        border: 1px solid $orange;
+                        background: #fff;
+                        color: $orange;
+                        cursor: pointer;
+                    }
+                }
+
+                &.prio {
+                    grid-area: prio;
+                }
+                &.img {
+                    grid-area: img;
+                }
+                &.cat {
+                    grid-area: cat;
+                }
+                &.author {
+                    grid-area: author;
+                }
+                &.title {
+                    grid-area: title;
+                }
+                &.lead {
+                    grid-area: lead;
+                }
+                &.body {
+                    grid-area: body;
+                }
+                &.submit {
+                    grid-area: submit;
+                }
+
+            }
+
+        }
+
+        }
+
+
 
 
     

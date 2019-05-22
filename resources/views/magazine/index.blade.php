@@ -31,7 +31,8 @@
     @foreach ($secondArticle as $article)
     <a href="{{ route ('show',  $article->article_id) }}">
         <article class="griditem">
-            <img src="{{$article->img_url}}" style="width:100%;" alt="">
+            <section>
+                <img src="{{$article->img_url}}" style="width:100%;" alt="">
             </section>
             <section class="text">
                 <h1>{{$article->title}}</h1>
