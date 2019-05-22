@@ -45,8 +45,6 @@
                     @endauth
           
             @endif
-            
-    
 
             
         </div>

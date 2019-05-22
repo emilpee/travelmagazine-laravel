@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Pattaya&display=swap);@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap);@charset "UTF-8";
 
+html .card form,
 html .singleArticle h3,
 html .singleArticle .jumbotron,
 html body #app .wrapper .tag,
@@ -40,6 +41,7 @@ html {
   padding: 0;
   /* Single article */
   /* Edit page */
+  /* Login page */
 }
 
 html body {
@@ -491,5 +493,54 @@ html form .form-group.body {
 
 html form .form-group.submit {
   grid-area: submit;
+}
+
+html .card form {
+  flex-direction: column;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+}
+
+html .card form label {
+  color: #444;
+}
+
+html .card form input[type=email],
+html .card form input[type=password],
+html .card form #name {
+  padding: 0.5rem 3rem 0.5rem 0.5rem;
+  border-radius: 4px;
+  border: none;
+}
+
+html .card form .form-group {
+  margin: 0.5rem;
+}
+
+html .card form .form-check-label {
+  font-size: 0.8em;
+  color: #f6993f;
+}
+
+html .card form button {
+  text-decoration: none;
+  background: #f6993f;
+  color: #fff;
+  padding: 1rem;
+  border: 1px solid #f6993f;
+  margin-top: 1.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s ease;
+}
+
+html .card form button:hover {
+  border: 1px solid #f6993f;
+  background: #fff;
+  color: #f6993f;
+  cursor: pointer;
 }
 

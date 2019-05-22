@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\DB;
@@ -85,9 +86,11 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
+        $categories = Category::all();
         $article = Article::findOrFail($id);
         return view('magazine.singleArticle', [
-            'article' => $article
+            'article' => $article,
+            'categories' => $categories
         ]);
     }
 
@@ -99,9 +102,11 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
+        $categories = Category::all();
         $article = Article::find($id);
         return view('magazine.edit', [
-            'article' => $article
+            'article' => $article,
+            'categories' => $categories
         ]);
     }
 

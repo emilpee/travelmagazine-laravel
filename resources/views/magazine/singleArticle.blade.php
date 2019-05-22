@@ -16,6 +16,7 @@
             <strong>{{$article->author}}</strong>
             <small>Last updated: {{$article->updated_at}}</small>
         </div>
+        
         @can('superUsers-only')
         <a class="editLink" href="{{ route('edit', $article->article_id) }}">Edit</a>
         @endcan
