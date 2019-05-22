@@ -1,22 +1,55 @@
-// Fonts
+    // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
+@import url('https://fonts.googleapis.com/css?family=Pattaya&display=swap');
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap");
 // Variables
 @import 'variables';
+@import 'typography';
 
-// Bootstrap
-/* @import '~bootstrap/scss/bootstrap'; */
 
+html {
+    margin:0;
+    max-width: 100vw;
+    width: 100%;
+    padding: 0;
 body {
-    
+    background: $background;
+    margin: 0;
+
+   
+
     #app {
-        
+
+        div {
+
+            
+            .lock {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 3rem;
+                border: 1px solid black;
+            }
+        }
+
         .navbar {
+            margin: 0;
             display: flex;
             flex-direction: row;
             padding: 2rem 1rem;
-            font-size: 1.5rem;
+            font-size: 1rem;
+            background: $background;
 
+            .nav-btn {
+                font-size: 1.4rem;
+                
+                .logo {
+                font-family: 'Pattaya', sans-serif;
+                font-size:3rem;
+                padding: 1rem;
+                }
+            }
+            
             & .login-btn {
                 flex: 1;
                 align-items: flex-end; 
@@ -24,12 +57,432 @@ body {
                 text-align: right;
             }
             & a {
-                color: grey;
+                color: rgb(0, 0, 0);
                 text-decoration: none;
+                text-transform: uppercase;
+    
             }
             & :hover {
-                color: red;
+                color: $pig;
             }
         }
-    }
-}
+
+
+        .wrapper {
+            max-width:100vw;
+            margin: 0 3rem; 
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: ($baseline*10) ($baseline*0.6) ($baseline*2.9) 
+            ($baseline*1.2) ($baseline*17) ($baseline*9) ($baseline*4) 
+            ($baseline*3) ($baseline*5);
+            grid-template-areas: 
+            "mimg mimg mimg mimg mimg mimg mimg"
+            ". . . tag . . . "
+            ". mhead mhead mhead mhead mhead ."
+            "search search search search search searchbtn ad"
+            "agrid agrid agrid agrid agrid agrid ad"
+            "flex flex flex flex flex flex flex"
+            "big big big big big big big"
+            "cat cat cat cat cat cat cat"
+            "catego catego catego catego catego catego catego";
+
+
+            
+            .mainimg {
+                grid-area: mimg;
+                background: lightblue;
+                overflow: hidden;
+                    
+                img {
+                    max-width: 93vw;
+                    min-width: 93vw;
+                    width: 100%;
+                    
+                }
+            }
+            .mainheader {
+                grid-area: mhead;
+                background: white;
+                transform: translateY(-8rem);
+                @extend %center;
+                text-transform: uppercase;
+                display: flex;
+                flex-direction: column;
+                padding: 2rem;
+                text-align: center;
+                
+            }
+            .tag {
+                grid-area: tag;
+                background: $pig;
+                z-index: 1;
+                transform: translateY(-7rem);
+                @extend %center;
+
+                h2 {
+                    font-size: .9rem;
+                    text-transform: uppercase;
+
+                }
+            }
+
+            .search {
+                grid-area: search;
+                background: white;
+                margin-bottom: 1.4rem;
+            
+                input[type=text] {
+                    font-size: .7rem;
+                    width: 100%;
+                    border: none;
+
+                }
+            }
+            .searchbtn{
+                grid-area: searchbtn;
+                background: white;
+                margin-bottom: 1.4rem;
+                margin-right: 1.5rem;
+                input[type=submit]{
+                    width: 100%;
+                    height: 100%;
+                    border:none;
+                    
+                }
+            }
+
+            .grid {
+                grid-area: agrid;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 1rem;
+                margin-right: 1.5rem;
+          
+                .griditem {
+                  background: white;
+                  display: flex;
+                  flex-direction: column;
+          
+                  .img {
+                    flex: 1;
+                    width: 100%;
+                    
+                  }
+          
+                  .text {
+                    background: white;
+                    flex:1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: left;
+                    align-items: left;
+                    padding: 1rem;
+                    min-height: 12rem;
+                    max-height: 12rem;
+                    height: 100%;
+                    
+                }
+              }
+            }  
+
+
+            .ad {
+                grid-area: ad;       
+                margin-left:2rem; 
+                img{
+                    max-width: 14vw;
+                    min-width: 14vw;
+                    width: 100%;
+                }
+            }
+            .flex {
+                margin: 1rem 0;
+                grid-area: flex;
+                display: flex;
+                margin-top: 3rem;
+                    .imgtv {
+                        background: lightblue;
+                        flex:2;
+                        display: flex;
+                        align-items: flex-end;
+                        
+                        .box {
+                            background: rgba(53, 53, 53, 0.767);
+                            padding: 1rem;
+                            width: 100%;
+                        }
+                        h2{
+                            color:white;
+                            
+                        
+                        }
+                        p{
+                            color: white;
+                        }
+                    }
+                    .list {
+                        background:white;
+                        flex: 1;
+                        overflow-y: scroll;
+                        ul {
+                            
+                            li{
+                               font-size: 0.5rem; 
+                               overflow-y: scroll;
+                                
+                            }
+                        }
+                    }
+                
+
+            }
+            .big{
+                grid-area: big;
+                background: blue;
+                margin-top: 2rem;
+            }
+            .cat{
+                grid-area: cat;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+            }
+            .categories {
+                    grid-area: catego;
+                    display: flex;
+                    margin-bottom: 2rem;
+
+                    .catimg {
+                       
+                        background: gold;
+                        flex:1;
+                        
+                        width: 3rem;
+                        margin-right: 1rem;
+                        .img{
+                            background-size: cover; 
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            h4{
+                                margin-top:0;
+                                padding: 0 1rem;
+                                color: white;
+                                margin: 0;
+                            }
+                            p{
+                                font-size: .8rem;
+                                color:white;
+                                padding: 0 1rem;
+                                margin: .6rem 0;
+                            }
+                        }
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                    }
+            }
+
+        }   
+        .second {     
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1rem;
+            margin: 1rem 3rem; 
+                .griditem {
+                  background: white;
+                  display: flex;
+                  flex-direction: column;
+                  background: red;
+                  max-width: 10px;
+                  min-width: 10px;
+                  width: 100%; 
+                
+                  .img {
+                    flex: 1;
+                    background-size: cover;
+                    max-width: 10px;
+                    min-width: 10px;
+                    width: 100%; 
+                  }
+                  .text {
+                    background: white;
+                    flex:1;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: left;
+                    align-items: left;
+                    padding: 1rem;
+                    min-height: 12rem;
+                    max-height: 12rem;
+                    height: 100%;
+                    }
+                }
+            }
+        }  
+
+
+        
+    } 
+
+        /* Single article */
+        .singleArticle {
+            background: #eee;
+            display: flex;
+            justify-content: center;
+            padding: 5rem;
+            margin: 4rem;
+            flex-direction: column;
+
+            .jumbotron {
+                @extend %center;
+            }
+
+            h3 {
+                @extend %center;
+            }
+
+            p {
+                line-height: 1.8em;
+                padding: 0 3rem 0 0;
+            }
+
+            
+            .randompic {
+                margin: auto;
+                padding: 1rem;
+                height: auto;
+            }
+            
+            .byline {
+                display: flex;
+                margin-top: 1.5rem;
+                justify-content: space-between;
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+                padding: 1rem 0;
+
+                small {
+                    text-align: right;
+                    font-style: italic;
+                }
+            }
+
+
+            .editLink {
+                text-decoration: none;
+                background: $orange;
+                color: #fff;
+                padding: 1.5rem;
+                border: 1px solid $orange;
+                margin-top: 1.5rem;
+                border-radius: 6px;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: .15rem;
+                transition: all .3s ease;
+
+                &:hover {
+                    border: 1px solid $orange;
+                    background: #fff;
+                    color: $orange;
+                }
+                  
+            }
+        }
+
+        /* Edit page */
+        form {
+            background: #eee;
+            padding: 3rem;
+            margin: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 15px;
+            grid-template-areas: 
+            "prio img cat"
+            "author author author"
+            "title title title"
+            "lead lead lead"
+            "body body body"
+            ". submit .";
+
+            .form-group {
+                display: grid;
+
+                input[type=text], textarea {
+                    padding: .5rem;
+                    border-radius: 4px;
+                    border:none;
+                }
+
+                label {
+                    font-weight: 700;
+                    color: $darkpig;
+                    text-transform: uppercase;
+                    letter-spacing: .02rem;
+                }
+
+                input[type=submit] {
+                    text-decoration: none;
+                    background: $orange;
+                    color: #fff;
+                    padding: 1.5rem;
+                    border: 1px solid $orange;
+                    margin-top: 1.5rem;
+                    border-radius: 6px;
+                    font-weight: 700;
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: .15rem;
+                    transition: all .3s ease;
+        
+                    &:hover {
+                        border: 1px solid $orange;
+                        background: #fff;
+                        color: $orange;
+                        cursor: pointer;
+                    }
+                }
+
+                &.prio {
+                    grid-area: prio;
+                }
+                &.img {
+                    grid-area: img;
+                }
+                &.cat {
+                    grid-area: cat;
+                }
+                &.author {
+                    grid-area: author;
+                }
+                &.title {
+                    grid-area: title;
+                }
+                &.lead {
+                    grid-area: lead;
+                }
+                &.body {
+                    grid-area: body;
+                }
+                &.submit {
+                    grid-area: submit;
+                }
+
+            }
+
+        }
+
+        }
+
+
+
+
+    

@@ -6,6 +6,7 @@ use App\Article;
 use App\Http\Resources\Article as ArticleResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\DB;
 
 class ArticleController extends Controller
 {
@@ -16,8 +17,44 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::all();
-        return ArticleResource::collection($articles);
+        $articles = DB::table('articles')
+        ->orderBy('prio', 'asc')
+        ->get();
+        return view('magazine.index', [
+            'articles' => $articles
+        ]);
+    }
+
+    public function frontPage()
+    {
+        $categories = DB::table('categories')
+        ->orderBy('category_id', 'asc')
+        ->get();
+        $ads = DB::table('ads')
+        ->where('format', '=', 1)
+        ->get();
+        $mainArticle = DB::table('articles')
+        ->where('prio', '=', 1)
+        ->get();
+        $secondArticle = DB::table('articles')
+        ->where('prio', '=', 2)
+        ->limit(6)
+        ->get();
+        $thirdArticle = DB::table('articles')
+        ->where('prio', '=', 3)
+        ->get();
+        $thirdChosenArticle = DB::table('articles')
+        ->where('prio', '=', 3)
+        ->limit(1)
+        ->get();
+        return view('magazine.index', [
+            'mainArticle' =>  $mainArticle, 
+            'secondArticle' =>  $secondArticle,
+            'thirdArticle' =>  $thirdArticle,
+            'thirdChosenArticle' =>  $thirdChosenArticle,
+            'ads' => $ads,
+            'categories' => $categories
+        ]);
     }
 
     /**
@@ -81,12 +118,13 @@ class ArticleController extends Controller
         $article->lead = Input::get('lead');
         $article->bodytext = Input::get('bodytext');
         $article->category_id = Input::get('category_id');
+        $article->author = Input::get('author');
         $article->img_url = Input::get('img_url');
-        $article->prio = Input::get('prio');
+        $article->prio = Input::get('prio');         
 
         $article->save();
 
-        return redirect('magazine.edit');
+        return redirect('/');
     }
 
     /**

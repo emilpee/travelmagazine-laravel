@@ -6,17 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
-    <title>Taravel</title>
+    <link rel="shortcut icon" href="{{ asset('favicon.png') }}" type="image">
+    
+    <title>GO!</title>
 </head>
 <body class="container">
 <div id="app">
     <div class="navbar">
 
         <div class="nav-btn">
-            <!-- icon -->
-            <a href="{{ url('/') }}">Home</a>
+            <a href="{{ url('/') }}" class="logo">GO!</a>
+                      
             <a href="{{ url('/categories') }}">Categories</a>
+            
         </div>
 
             @if (Route::has('login'))
@@ -46,6 +48,7 @@
             @endif
         </div>
 @yield('main')
+
 <router-view name="MagazineFooter"></router-view>
 </div>
 </body>

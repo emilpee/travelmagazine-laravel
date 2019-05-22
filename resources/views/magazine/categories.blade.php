@@ -4,8 +4,7 @@
 <div>
     <ul class="category-group">
         @foreach ($categories as $category)
-        <li class="list-group-item"> {{$category->name}} </li> 
-
+        <a href="{{ route('categories.show', $category->category_id) }}" class="list-group-item"> {{$category->name}} </a> 
         @endforeach
     </ul> 
 
