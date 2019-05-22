@@ -28,9 +28,20 @@ html {
 html body {
   background: #e5e5e5;
   margin: 0;
-  max-width: 100vw;
-  width: 100%;
-  padding: 0;
+}
+
+html body #app div .lock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+  border: 1px solid black;
 }
 
 html body #app .navbar {
@@ -87,9 +98,13 @@ html body #app .wrapper {
   display: grid;
   -ms-grid-columns: (1fr)[7];
       grid-template-columns: repeat(7, 1fr);
-  -ms-grid-rows: 28rem 2.4rem 11.6rem 2.8rem 32rem 24rem 12rem 4rem 4rem 4rem;
-      grid-template-rows: 28rem 2.4rem 11.6rem 2.8rem 32rem 24rem 12rem 4rem 4rem 4rem;
-      grid-template-areas: "mimg mimg mimg mimg mimg mimg mimg" ". . . tag . . . " ". mhead mhead mhead mhead mhead ." "search search search search search searchbtn ad" "articles articles articles articles articles articles ad" "flex flex flex flex flex flex flex" "big big big big big big big" "cat cat cat cat cat cat cat" "catego catego catego catego catego catego catego";
+  -ms-grid-rows: 28rem 2.4rem 11.6rem 2.8rem 48rem 36rem 16rem 12rem 20rem;
+      grid-template-rows: 28rem 2.4rem 11.6rem 2.8rem 48rem 36rem 16rem 12rem 20rem;
+      grid-template-areas: "mimg mimg mimg mimg mimg mimg mimg" ". . . tag . . . " ". mhead mhead mhead mhead mhead ." "search search search search search searchbtn ad" "agrid agrid agrid agrid agrid agrid ad" "flex flex flex flex flex flex flex" "big big big big big big big" "cat cat cat cat cat cat cat" "catego catego catego catego catego catego catego";
+}
+
+html body #app .wrapper img {
+  width: 100%;
 }
 
 html body #app .wrapper .mainimg {
@@ -147,6 +162,7 @@ html body #app .wrapper .searchbtn {
   grid-area: searchbtn;
   background: white;
   margin-bottom: .4rem;
+  margin-right: 1.5rem;
 }
 
 html body #app .wrapper .searchbtn input[type=submit] {
@@ -155,11 +171,21 @@ html body #app .wrapper .searchbtn input[type=submit] {
   border: none;
 }
 
-html body #app .wrapper .articles {
+html body #app .wrapper .grid {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 6;
-  grid-area: articles;
+  grid-area: agrid;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin-right: 1.5rem;
+}
+
+html body #app .wrapper .grid .griditem {
+  background: cyan;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,56 +195,34 @@ html body #app .wrapper .articles {
           flex-direction: column;
 }
 
-html body #app .wrapper .articles .box1 {
+html body #app .wrapper .grid .griditem .img {
+  background: lightblue;
+  height: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+html body #app .wrapper .grid .griditem .text {
+  background: white;
+  height: 2rem;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-  height: 100%;
-  background: green;
-  margin-left: 1rem;
-}
-
-html body #app .wrapper .articles .box1 .artlead {
-  width: 10rem;
-  height: 10rem;
-  background: lime;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: column;
-      -ms-flex: column;
-          flex: column;
-}
-
-html body #app .wrapper .articles .box2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 100%;
-  height: 100%;
-  margin-top: 1rem;
-  background: red;
-}
-
-html body #app .wrapper .articles .box2 .artlead {
-  width: 10rem;
-  height: 10rem;
-  background: rebeccapurple;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: column;
-      -ms-flex: column;
-          flex: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  padding: 1rem;
 }
 
 html body #app .wrapper .ad {
@@ -236,12 +240,29 @@ html body #app .wrapper .flex {
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: flex;
-  background: pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3rem;
 }
 
-html body #app .wrapper .flex .tv .list ul li {
+html body #app .wrapper .flex .imgtv {
+  background: lightblue;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+
+html body #app .wrapper .flex .list {
+  background: white;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+html body #app .wrapper .flex .list ul li {
   font-size: 0.5rem;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 html body #app .wrapper .big {
@@ -250,6 +271,7 @@ html body #app .wrapper .big {
   -ms-grid-column-span: 7;
   grid-area: big;
   background: blue;
+  margin-top: 2rem;
 }
 
 html body #app .wrapper .cat {
@@ -257,7 +279,15 @@ html body #app .wrapper .cat {
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: cat;
-  background: rebeccapurple;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 html body #app .wrapper .categories {
@@ -265,6 +295,23 @@ html body #app .wrapper .categories {
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: catego;
-  background: violet;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+html body #app .wrapper .categories .catimg {
+  background: white;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  width: 3rem;
+  margin-right: 1rem;
+}
+
+html body #app .wrapper .categories .catimg:last-child {
+  margin-right: 0;
 }
 /*# sourceMappingURL=app.css.map */
