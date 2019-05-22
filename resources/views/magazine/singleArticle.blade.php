@@ -2,17 +2,23 @@
 
 @section('main')
  
- @can('superUsers-only')
-    <a href="{{ route('edit', $article->article_id) }}">Edit</a>
-@endcan
-    <div>
+    <div class="singleArticle">
         <img src="{{$article->img_url}}" alt="Archive picture">
         <h1 class="jumbotron">{{$article->title}}</h1>
         <h3>{{$article->lead}}</h3>
         @auth
 
         <p>{{$article->bodytext}}</p>
-        <strong>{{$article->author}}</strong>
+        <img src="https://picsum.photos/400/250" class="randompic" alt="Archive picture">
+        <p>{{$article->bodytext}}</p>
+        
+        <div class="byline">
+            <strong>{{$article->author}}</strong>
+            <small>Last updated: {{$article->updated_at}}</small>
+        </div>
+        @can('superUsers-only')
+        <a class="editLink" href="{{ route('edit', $article->article_id) }}">Edit</a>
+        @endcan
     </div>
 @endauth
 
@@ -32,6 +38,11 @@
 
         @endauth
     </div>
+    
 @endif
+
+    <div class="big">
+            
+    </div>
 
 @endsection

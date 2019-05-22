@@ -1,7 +1,8 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 @import url("https://fonts.googleapis.com/css?family=Pattaya&display=swap");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap");
-html body #app .wrapper .mainheader, html body #app .wrapper .tag {
+html body #app .wrapper .mainheader, html body #app .wrapper .tag, html .singleArticle .jumbotron, html .singleArticle h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,6 +43,8 @@ html {
   max-width: 100vw;
   width: 100%;
   padding: 0;
+  /* Single article */
+  /* Edit page */
 }
 
 html body {
@@ -119,7 +122,7 @@ html body #app .wrapper {
       grid-template-columns: repeat(7, 1fr);
   -ms-grid-rows: 40rem 2.4rem 11.6rem 4.8rem 68rem 36rem 16rem 12rem 20rem;
       grid-template-rows: 40rem 2.4rem 11.6rem 4.8rem 68rem 36rem 16rem 12rem 20rem;
-      grid-template-areas: "mimg mimg mimg mimg mimg mimg mimg" ". . . tag . . . " ". mhead mhead mhead mhead mhead ." "search search search search search searchbtn ad" "agrid agrid agrid agrid agrid agrid ad" "flex flex flex flex flex flex flex" "big big big big big big big" "cat cat cat cat cat cat cat" "catego catego catego catego catego catego catego";
+      grid-template-areas: "mimg mimg mimg mimg mimg mimg mimg" ". . . tag . . . " ". mhead mhead mhead mhead mhead ." "search search search search search searchbtn ad" "agrid agrid agrid agrid agrid agrid ad" "flex flex flex flex flex flex flex" "big big big big big big big" "cat cat cat cat cat cat cat" "catego catego catego catego catego catego catego";
 }
 
 html body #app .wrapper .mainimg {
@@ -333,9 +336,8 @@ html body #app .wrapper .big {
 }
 
 html body #app .wrapper .cat {
-  -ms-grid-row: 8;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 7;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: cat;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -457,5 +459,179 @@ html body #app .second .griditem .text {
   min-height: 12rem;
   max-height: 12rem;
   height: 100%;
+}
+
+html .singleArticle {
+  background: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5rem;
+  margin: 4rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html .singleArticle p {
+  line-height: 1.8em;
+  padding: 0 3rem 0 0;
+}
+
+html .singleArticle .randompic {
+  margin: auto;
+  padding: 1rem;
+  height: auto;
+}
+
+html .singleArticle .byline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 1rem 0;
+}
+
+html .singleArticle .byline small {
+  text-align: right;
+  font-style: italic;
+}
+
+html .singleArticle .editLink {
+  text-decoration: none;
+  background: #f6993f;
+  color: #fff;
+  padding: 1.5rem;
+  border: 1px solid #f6993f;
+  margin-top: 1.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+html .singleArticle .editLink:hover {
+  border: 1px solid #f6993f;
+  background: #fff;
+  color: #f6993f;
+}
+
+html form {
+  background: #eee;
+  padding: 3rem;
+  margin: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 15px;
+      grid-template-areas: "prio img cat" "author author author" "title title title" "lead lead lead" "body body body" ". submit .";
+}
+
+html form .form-group {
+  display: -ms-grid;
+  display: grid;
+}
+
+html form .form-group input[type=text], html form .form-group textarea {
+  padding: .5rem;
+  border-radius: 4px;
+  border: none;
+}
+
+html form .form-group label {
+  font-weight: 700;
+  color:   #e68b8b;
+  text-transform: uppercase;
+  letter-spacing: .02rem;
+}
+
+html form .form-group input[type=submit] {
+  text-decoration: none;
+  background: #f6993f;
+  color: #fff;
+  padding: 1.5rem;
+  border: 1px solid #f6993f;
+  margin-top: 1.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+html form .form-group input[type=submit]:hover {
+  border: 1px solid #f6993f;
+  background: #fff;
+  color: #f6993f;
+  cursor: pointer;
+}
+
+html form .form-group.prio {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: prio;
+}
+
+html form .form-group.img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: img;
+}
+
+html form .form-group.cat {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: cat;
+}
+
+html form .form-group.author {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: author;
+}
+
+html form .form-group.title {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: title;
+}
+
+html form .form-group.lead {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: lead;
+}
+
+html form .form-group.body {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: body;
+}
+
+html form .form-group.submit {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: submit;
 }
 /*# sourceMappingURL=app.css.map */
