@@ -85,8 +85,10 @@
        @foreach ($categories as $category)
            <a class="catimg" href="#">
                <div class="img" style="background-image: url({{$category->img_url}});">
-                   <h4>{{$category->name}}</h4>
-                   <p>{{$category->text}}</p>
+                    <div class="box">
+                        <h4>{{$category->name}}</h4>
+                        <p>{{$category->text}}</p>
+                    </div>
                </div>
            </a>
         @endforeach
