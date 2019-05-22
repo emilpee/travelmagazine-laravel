@@ -47,6 +47,11 @@ html body {
   margin: 0;
 }
 
+html body #app img {
+  width: 100%;
+  max-width: 640px;
+}
+
 html body #app div .lock {
   display: flex;
   flex-direction: column;

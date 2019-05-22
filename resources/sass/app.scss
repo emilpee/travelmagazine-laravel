@@ -19,6 +19,11 @@ body {
 
     #app {
 
+        img {
+            width: 100%;
+            max-width: 640px;
+        }
+
         div {
 
             
@@ -215,6 +220,7 @@ body {
                 grid-area: flex;
                 display: flex;
                 margin-top: 3rem;
+
                     .imgtv {
                         background: lightblue;
                         flex:2;

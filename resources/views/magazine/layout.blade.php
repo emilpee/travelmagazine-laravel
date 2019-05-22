@@ -18,7 +18,7 @@
             <a href="{{ url('/') }}" class="logo">GO!</a>
                       
             <a href="{{ url('/categories') }}">Categories</a>
-            
+            @yield('navbar')
         </div>
 
             @if (Route::has('login'))

@@ -11,9 +11,10 @@
             <h2>Go Europe</h2>
         </div>
         <div class="mainheader">
-     
-            <h1>{{$article->title}}</h1>
-            <h3>{{$article->lead}}</h3>
+            <a href="{{ route ('show',  $article->article_id) }}">
+                <h1>{{$article->title}}</h1>
+                <h3>{{$article->lead}}</h3>
+            </a>
         </div>
     @endforeach
         
@@ -29,8 +30,8 @@
 
     <div class="grid">
     @foreach ($secondArticle as $article)
-    <a href="{{ route ('show',  $article->article_id) }}">
-        <article class="griditem">
+    <article class="griditem">
+        <a href="{{ route ('show',  $article->article_id) }}">
             <section>
                 <img src="{{$article->img_url}}" style="width:100%;" alt="">
             </section>
@@ -38,8 +39,8 @@
                 <h1>{{$article->title}}</h1>
                 <p>{{$article->lead}}</p>
             </section>
-        </article>
-    </a>                
+        </a>                
+    </article>
     @endforeach
     </div>
 

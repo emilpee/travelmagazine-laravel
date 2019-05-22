@@ -1,6 +1,6 @@
 @extends ('magazine.layout')
 
-@section('main')
+@section('navbar')
 <div>
     <ul class="category-group">
         @foreach ($categories as $category)
