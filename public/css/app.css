@@ -49,10 +49,23 @@ html body {
 
 html body #app div .lock {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 3rem;
+  padding: 2rem;
   border: 1px solid black;
+  border-radius: 4px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6em;
+  width: 50%;
+}
+
+html body #app div .lock a {
+  margin: 0 0 1rem 0;
+  color: #e68b8b;
+}
+
+html body #app div .lock img {
+  width: 200px;
 }
 
 html body #app .navbar {
