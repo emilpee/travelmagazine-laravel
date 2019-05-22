@@ -11,7 +11,7 @@
             <h2>Go Europe</h2>
         </div>
         <div class="mainheader">
-     
+          <a href="{{ route ('show',  $article->article_id) }}">
             <h1>{{$article->title}}</h1>
             <h3>{{$article->lead}}</h3>
         </div>
@@ -32,7 +32,7 @@
     <a href="{{ route ('show',  $article->article_id) }}">
         <article class="griditem">
             <section class="img" style="background-image:url({{$article->img_url}});">
-            {{-- <img src="{{$article->img_url}}" style="width:100%;" alt=""> --}}
+            <img src="{{$article->img_url}}" style="width:100%;" alt="">
             </section>
             <section class="text">
                 <h1>{{$article->title}}</h1>
