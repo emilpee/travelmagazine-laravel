@@ -12,6 +12,7 @@
         @auth
 
         <p>{{$article->bodytext}}</p>
+        <strong>{{$article->author}}</strong>
     </div>
 @endauth
 

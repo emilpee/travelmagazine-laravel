@@ -11,10 +11,10 @@
             <h2>Go Europe</h2>
         </div>
         <div class="mainheader">
-     
+          <a href="{{ route ('show',  $article->article_id) }}">
             <h1>{{$article->title}}</h1>
             <h3>{{$article->lead}}</h3>
-
+          </a>
         @endforeach
         </div>
     
