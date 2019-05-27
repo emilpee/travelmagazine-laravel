@@ -16,30 +16,29 @@
                 <h3>{{$article->lead}}</h3>
             </a>
         </div>
-    @endforeach
+    @endforeach           
 
     <div class="grid">
-    @foreach ($secondArticle as $article)
-    <article class="griditem">
-        <a href="{{ route ('show', $article->article_id) }}">
-            <section>
-                <img src="{{$article->img_url}}" alt="">
-            </section>
-            <section class="text">
-                <h1>{{$article->title}}</h1>
-                <p>{{$article->lead}}</p>
-            </section>
-        </a>                
-    </article>
-    @endforeach
-    </div>
-
-        @foreach ($ads as $ad)
-            <div class="ad">
-                <img src="{{$ad->img_url}}">
-            </div>
+        @foreach ($secondArticle as $article)
+            <article class="griditem">
+                <a href="{{ route ('show',  $article->article_id) }}">
+                    <section>
+                        <img src="{{$article->img_url}}" style="width:100%;" alt="">
+                    </section>
+                    <section class="text">
+                        <h1>{{$article->title}}</h1>
+                        <p>{{$article->lead}}</p>
+                    </section>
+                </a>                
+            </article>
         @endforeach
-         
+    </div>
+    
+        <div class="ad">
+            @foreach ($ads as $ad)
+                <img src="{{$ad->img_url}}">
+            @endforeach
+        </div>     
 
        <div class="flex">
             @foreach ($thirdChosenArticle as $article)
@@ -64,9 +63,10 @@
                     
        </div>
 
-       <div class="big">
-        
+       @foreach ($bigads as $ad)
+        <div class="big"  style="background-image: url({{$ad->img_url}});">            
         </div>
+        @endforeach
 
        <div class="cat">
         <h2>CATEGORIES</h2>
