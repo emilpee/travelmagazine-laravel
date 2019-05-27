@@ -3,6 +3,7 @@
 html .card form,
 html .singleArticle h3,
 html .singleArticle .jumbotron,
+html body #app .sgrid .pagination .page-item,
 html body #app .wrapper .tag,
 html body #app .wrapper .mainheader {
   display: flex;
@@ -320,6 +321,30 @@ html body #app .sgrid {
   grid-template-rows: 28rem 72rem 20rem;
   grid-template-columns: 1fr;
   grid-template-areas: "picture" "gallery";
+}
+
+html body #app .sgrid .pagination {
+  flex-direction: row;
+  list-style: none;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+html body #app .sgrid .pagination .page-item {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease-in-out;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+html body #app .sgrid .pagination .page-item:hover {
+  background: #FFA7A7;
+  margin: 0 0.4rem;
+}
+
+html body #app .sgrid .pagination .page-item .page-link {
+  padding: 0.5rem;
 }
 
 html body #app .sgrid .secondimg {

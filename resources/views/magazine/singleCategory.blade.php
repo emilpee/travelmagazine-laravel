@@ -11,7 +11,7 @@
     </div>
 
 <div class="second">
-    @foreach ($category->articles as $article)
+    @foreach ($articles as $article)
     <article class="griditem">
         <a href="{{ route('show', $article->article_id) }}">
             <section class="img">
@@ -26,7 +26,10 @@
         </a>
     </article>
     @endforeach
+</div>
 
+<div class="links">
+    {{ $articles->links() }}
 </div>
 
 <div class="ad"></div>

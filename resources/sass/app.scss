@@ -313,6 +313,34 @@ body {
             grid-template-columns: 1fr;
             grid-template-areas: "picture" "gallery";
 
+
+            .pagination {
+                flex-direction: row;
+                list-style: none;
+                padding: .75rem;
+                display: flex;
+                justify-content: center;
+
+                .page-item {
+                    border: 1px solid rgba(0, 0, 0, .6);
+                    @extend %center;
+                    transition: all .3s ease-in-out;
+                    padding: .5rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: $pig;
+                        margin: 0 .4rem;
+                    }
+
+                    .page-link {
+                        padding: .5rem;
+                    }
+
+                }
+
+            }
+
         .secondimg{
             grid-area: picture;
             margin: 0 auto;
@@ -346,20 +374,22 @@ body {
                   display: flex;
                   flex-direction: column;
                   background: white;
-                  .img {
-                    flex: 1;
-                  }
-                  .text1 {                    
-                    flex:1; 
-                    padding: 0 1rem;
-                    align-content: flex-start;
+
+                    .img {
+                        flex: 1;
                     }
-                 .text2 {                    
-                    flex:1; 
-                    padding: 0 1rem;                    
-                    align-content:  flex-end;
+                    .text1 {                    
+                        flex:1; 
+                        padding: 0 1rem;
+                        align-content: flex-start;
+                    }
+                    .text2 {                    
+                        flex:1; 
+                        padding: 0 1rem;                    
+                        align-content:  flex-end;
                     }
                 }
+
             }
         }  
     }

@@ -53,7 +53,7 @@ class CategoryController extends Controller
     {
         $categories = Category::all();
         $category = Category::findOrFail($id);
-        $articles = Category::with('articles')->paginate(8);
+        $articles = Category::find($id)->articles()->paginate(8);
         return view('magazine.singleCategory', [
             'category' => $category,
             'categories' => $categories,

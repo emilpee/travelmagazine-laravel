@@ -22,11 +22,23 @@
             <h3>Follow Us</h3>
             <ul>
                 <li>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png">
-                    Facebook
+                    <a href="http://www.facebook.com">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png" alt="Visit us on Facebook">
+                        Facebook
+                    </a>
                 </li>
-                <li>Instagram</li>
-                <li>Twitter</li>
+                <li>
+                    <a href="http://www.instagram.com">
+                        <img src="http://pngimg.com/uploads/instagram/instagram_PNG9.png" alt="Visit us on Instagram">
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.twitter.com">
+                        <img src="https://1000logos.net/wp-content/uploads/2017/06/Twitter-Logo.png" alt="Visit us on Twitter">
+                        Twitter
+                    </a>
+                </li>
             </ul>
         </section>
     </div>
@@ -43,6 +55,11 @@
         width: 100%;
     }
 
+
+    img {
+        width: 15px !important;
+    }
+
     section {
         flex: 1;
         text-align: left;
@@ -50,17 +67,20 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        border-left: 1px solid black;
+        border-left: 1px solid rgba(0, 0, 0, .3);
     }
 
     h3 {
         font-size: 1.6em;
     }
 
-
     p, li {
         margin: 0;
         line-height: 1.7em;
+    }
+
+    li {
+        padding: .25rem 0;
     }
 
     #submit {
@@ -104,10 +124,7 @@
     ul {
         list-style: none;
         padding: 0;
-    }
-
-    img {
-        width: 2rem;
+        margin: 0;
     }
 
 </style>

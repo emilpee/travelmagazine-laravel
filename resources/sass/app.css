@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 @import url("https://fonts.googleapis.com/css?family=Pattaya&display=swap");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap");
-html body #app .wrapper .mainheader, html body #app .wrapper .tag, html .singleArticle .jumbotron, html .singleArticle h3, html .card form {
+html body #app .wrapper .mainheader, html body #app .wrapper .tag, html body #app .sgrid .pagination .page-item, html .singleArticle .jumbotron, html .singleArticle h3, html .card form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -419,6 +419,38 @@ html body #app .sgrid {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
       grid-template-areas: "picture" "gallery";
+}
+
+html body #app .sgrid .pagination {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  padding: .75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body #app .sgrid .pagination .page-item {
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  padding: .5rem;
+  cursor: pointer;
+}
+
+html body #app .sgrid .pagination .page-item:hover {
+  background: #FFA7A7;
+  margin: 0 .4rem;
+}
+
+html body #app .sgrid .pagination .page-item .page-link {
+  padding: .5rem;
 }
 
 html body #app .sgrid .secondimg {
