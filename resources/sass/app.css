@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 @import url("https://fonts.googleapis.com/css?family=Pattaya&display=swap");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap");
-html body #app .wrapper .mainheader, html body #app .wrapper .tag, html .singleArticle .jumbotron, html .singleArticle h3 {
+html body #app .wrapper .mainheader, html body #app .wrapper .tag, html .singleArticle .jumbotron, html .singleArticle h3, html .card form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,6 +50,7 @@ html {
   padding: 0;
   /* Single article */
   /* Edit page */
+  /* Login page */
 }
 
 html body {
@@ -57,18 +58,37 @@ html body {
   margin: 0;
 }
 
+html body #app img {
+  width: 100%;
+  max-width: 640px;
+}
+
 html body #app div .lock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3rem;
+  padding: 2rem;
   border: 1px solid black;
+  border-radius: 4px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6em;
+  width: 50%;
+}
+
+html body #app div .lock a {
+  margin: 0 0 1rem 0;
+  color: #e68b8b;
+}
+
+html body #app div .lock img {
+  width: 200px;
 }
 
 html body #app .navbar {
@@ -81,12 +101,28 @@ html body #app .navbar {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 2rem 1rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   background: #e5e5e5;
 }
 
-html body #app .navbar .nav-btn {
-  font-size: 1.4rem;
+html body #app .navbar .nav-btn .navLink {
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+
+html body #app .navbar .nav-btn .navLink.loginBtn {
+  border-left: 1px solid black;
+  margin: 0 0 0 2rem;
+  padding: 0 0 0 2rem;
+  color: #e68b8b;
+}
+
+html body #app .navbar .nav-btn .navLink.registerBtn {
+  color: #e68b8b;
+}
+
+html body #app .navbar .nav-btn .navLink:hover {
+  color: #FFA7A7;
 }
 
 html body #app .navbar .nav-btn .logo {
@@ -95,26 +131,7 @@ html body #app .navbar .nav-btn .logo {
   padding: 1rem;
 }
 
-html body #app .navbar .login-btn {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  text-align: right;
-}
-
-html body #app .navbar a {
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-html body #app .navbar :hover {
+html body #app .navbar .nav-btn .logo:hover {
   color: #FFA7A7;
 }
 
@@ -685,5 +702,57 @@ html form .form-group.submit {
   -ms-grid-row: 6;
   -ms-grid-column: 2;
   grid-area: submit;
+}
+
+html .card form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+}
+
+html .card form label {
+  color: #444;
+}
+
+html .card form input[type=email], html .card form input[type=password], html .card form #name {
+  padding: .5rem 3rem .5rem .5rem;
+  border-radius: 4px;
+  border: none;
+}
+
+html .card form .form-group {
+  margin: .5rem;
+}
+
+html .card form .form-check-label {
+  font-size: .8em;
+  color: #f6993f;
+}
+
+html .card form button {
+  text-decoration: none;
+  background: #f6993f;
+  color: #fff;
+  padding: 1rem;
+  border: 1px solid #f6993f;
+  margin-top: 1.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .15rem;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+html .card form button:hover {
+  border: 1px solid #f6993f;
+  background: #fff;
+  color: #f6993f;
+  cursor: pointer;
 }
 /*# sourceMappingURL=app.css.map */

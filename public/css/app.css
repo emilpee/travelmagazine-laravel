@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Pattaya&display=swap);@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap);@charset "UTF-8";
 
+html .card form,
 html .singleArticle h3,
 html .singleArticle .jumbotron,
 html body #app .wrapper .tag,
@@ -45,6 +46,7 @@ html {
   padding: 0;
   /* Single article */
   /* Edit page */
+  /* Login page */
 }
 
 html body {
@@ -52,12 +54,30 @@ html body {
   margin: 0;
 }
 
+html body #app img {
+  width: 100%;
+  max-width: 640px;
+}
+
 html body #app div .lock {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 3rem;
+  padding: 2rem;
   border: 1px solid black;
+  border-radius: 4px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6em;
+  width: 50%;
+}
+
+html body #app div .lock a {
+  margin: 0 0 1rem 0;
+  color: #e68b8b;
+}
+
+html body #app div .lock img {
+  width: 200px;
 }
 
 html body #app .navbar {
@@ -65,12 +85,28 @@ html body #app .navbar {
   display: flex;
   flex-direction: row;
   padding: 2rem 1rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   background: #e5e5e5;
 }
 
-html body #app .navbar .nav-btn {
-  font-size: 1.4rem;
+html body #app .navbar .nav-btn .navLink {
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+
+html body #app .navbar .nav-btn .navLink.loginBtn {
+  border-left: 1px solid black;
+  margin: 0 0 0 2rem;
+  padding: 0 0 0 2rem;
+  color: #e68b8b;
+}
+
+html body #app .navbar .nav-btn .navLink.registerBtn {
+  color: #e68b8b;
+}
+
+html body #app .navbar .nav-btn .navLink:hover {
+  color: #FFA7A7;
 }
 
 html body #app .navbar .nav-btn .logo {
@@ -79,20 +115,7 @@ html body #app .navbar .nav-btn .logo {
   padding: 1rem;
 }
 
-html body #app .navbar .login-btn {
-  flex: 1;
-  align-items: flex-end;
-  justify-content: flex-end;
-  text-align: right;
-}
-
-html body #app .navbar a {
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-html body #app .navbar :hover {
+html body #app .navbar .nav-btn .logo:hover {
   color: #FFA7A7;
 }
 
@@ -514,5 +537,54 @@ html form .form-group.body {
 
 html form .form-group.submit {
   grid-area: submit;
+}
+
+html .card form {
+  flex-direction: column;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+}
+
+html .card form label {
+  color: #444;
+}
+
+html .card form input[type=email],
+html .card form input[type=password],
+html .card form #name {
+  padding: 0.5rem 3rem 0.5rem 0.5rem;
+  border-radius: 4px;
+  border: none;
+}
+
+html .card form .form-group {
+  margin: 0.5rem;
+}
+
+html .card form .form-check-label {
+  font-size: 0.8em;
+  color: #f6993f;
+}
+
+html .card form button {
+  text-decoration: none;
+  background: #f6993f;
+  color: #fff;
+  padding: 1rem;
+  border: 1px solid #f6993f;
+  margin-top: 1.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s ease;
+}
+
+html .card form button:hover {
+  border: 1px solid #f6993f;
+  background: #fff;
+  color: #f6993f;
+  cursor: pointer;
 }
 
