@@ -100,12 +100,12 @@ body {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             grid-template-rows: ($baseline*8) ($baseline*0.6) ($baseline*2.9) 
-            ($baseline*1.2) ($baseline*17) ($baseline*9) ($baseline*4.85) 
+             ($baseline*17) ($baseline*9) ($baseline*4.85) 
             ($baseline*3) ($baseline*5);
             grid-template-areas: 
             "mimg mimg mimg mimg mimg mimg mimg"
             ". . . tag . . . "
-            ". mhead mhead mhead mhead mhead ad"
+            ". mhead mhead mhead mhead mhead ."
             "agrid agrid agrid agrid agrid agrid ad"
             "flex flex flex flex flex flex flex"
             "big big big big big big big"
@@ -188,11 +188,13 @@ body {
 
             .ad {
                 grid-area: ad;       
-                margin-left:2rem; 
+                margin-left:1rem;
+                
                 img{
                     max-width: 14vw;
                     min-width: 14vw;
                     width: 100%;
+                    margin-bottom: .7rem;
                 }
             }
             .flex {
