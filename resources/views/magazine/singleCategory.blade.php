@@ -29,7 +29,12 @@
 
 </div>
 
-<div class="ad"></div>
+@foreach ($bigads as $ad)
+    <div class="ad"  style="background-image: url({{$ad->img_url}});"> 
+                
+    </div>
+@endforeach
+
 
 
 
