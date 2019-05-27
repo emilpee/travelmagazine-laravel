@@ -142,8 +142,8 @@ html body #app .wrapper {
   display: grid;
   -ms-grid-columns: (1fr)[7];
       grid-template-columns: repeat(7, 1fr);
-  -ms-grid-rows: 32rem 2.4rem 11.6rem 4.8rem 68rem 36rem 16rem 12rem 20rem;
-      grid-template-rows: 32rem 2.4rem 11.6rem 4.8rem 68rem 36rem 16rem 12rem 20rem;
+  -ms-grid-rows: 32rem 2.4rem 11.6rem 4.8rem 68rem 36rem 19.4rem 12rem 20rem;
+      grid-template-rows: 32rem 2.4rem 11.6rem 4.8rem 68rem 36rem 19.4rem 12rem 20rem;
       grid-template-areas: "mimg mimg mimg mimg mimg mimg mimg" ". . . tag . . . " ". mhead mhead mhead mhead mhead ." "search search search search search searchbtn ad" "agrid agrid agrid agrid agrid agrid ad" "flex flex flex flex flex flex flex" "big big big big big big big" "cat cat cat cat cat cat cat" "catego catego catego catego catego catego catego";
 }
 
@@ -152,7 +152,6 @@ html body #app .wrapper .mainimg {
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: mimg;
-  background: lightblue;
   overflow: hidden;
 }
 
@@ -353,8 +352,9 @@ html body #app .wrapper .big {
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: big;
-  background: blue;
   margin-top: 2rem;
+  background-size: cover;
+  height: 100%;
 }
 
 html body #app .wrapper .cat {
