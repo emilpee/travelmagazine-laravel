@@ -28,12 +28,17 @@
     @endforeach
 </div>
 
+<br>
+
+@foreach ($bigads as $ad)
+<div class="ad">
+    <img src="{{$ad->img_url}}" alt="Go to ad" />     
+</div>
+@endforeach
+
 <div class="links">
     {{ $articles->links() }}
 </div>
-
-<div class="ad"></div>
-
 
 
 </section>

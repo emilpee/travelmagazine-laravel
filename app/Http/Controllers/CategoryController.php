@@ -51,13 +51,19 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
+        $bigads = DB::table('ads')
+        ->where('format', '=', 2)
+        ->limit(1)
+        ->get();
+
         $categories = Category::all();
         $category = Category::findOrFail($id);
         $articles = Category::find($id)->articles()->paginate(8);
         return view('magazine.singleCategory', [
             'category' => $category,
             'categories' => $categories,
-            'articles' => $articles
+            'articles' => $articles,
+            'bigads' => $bigads
         ]);
     }
 
