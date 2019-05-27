@@ -1,0 +1,166 @@
+html { 
+  
+    body {
+        
+        /* Edit page */
+        form {
+            background: #eee;
+            padding: 3rem;
+            margin: 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 15px;
+            grid-template-areas: 
+            "prio img cat"
+            "author author author"
+            "title title title"
+            "lead lead lead"
+            "body body body"
+            ". submit .";
+
+            .form-group {
+                display: grid;
+
+                input[type=text], textarea {
+                    padding: .5rem;
+                    border-radius: 4px;
+                    border:none;
+                }
+
+                label {
+                    font-weight: 700;
+                    color: $darkpig;
+                    text-transform: uppercase;
+                    letter-spacing: .02rem;
+                }
+
+                input[type=submit] {
+                    text-decoration: none;
+                    background: $orange;
+                    color: #fff;
+                    padding: 1.5rem;
+                    border: 1px solid $orange;
+                    margin-top: 1.5rem;
+                    border-radius: 6px;
+                    font-weight: 700;
+                    text-align: center;
+                    text-transform: uppercase;
+                    letter-spacing: .15rem;
+                    transition: all .3s ease;
+        
+                    &:hover {
+                        border: 1px solid $orange;
+                        background: #fff;
+                        color: $orange;
+                        cursor: pointer;
+                    }
+                }
+
+                &.prio {
+                    grid-area: prio;
+                }
+                &.img {
+                    grid-area: img;
+                }
+                &.cat {
+                    grid-area: cat;
+                }
+                &.author {
+                    grid-area: author;
+                }
+                &.title {
+                    grid-area: title;
+                }
+                &.lead {
+                    grid-area: lead;
+                }
+                &.body {
+                    grid-area: body;
+                }
+                &.submit {
+                    grid-area: submit;
+                }
+
+            }
+
+        }
+
+    }
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+    html { 
+  
+        body {
+            
+            /* Edit page */
+            form {
+                background: #eee;
+                padding: 0.8rem;
+                margin: 0rem;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: auto;
+                grid-gap: 15px;
+                grid-template-areas: 
+                "prio prio prio"
+                "img img img"
+                "cat cat cat"
+                "author author author"
+                "title title title"
+                "lead lead lead"
+                "body body body"
+                "submit submit .";
+    
+                .form-group {
+                    display: grid;
+    
+                    input[type=text], textarea {
+                        padding: .5rem;
+                        border-radius: 4px;
+                        border:none;
+                    }
+    
+                    label {
+                        font-weight: 700;
+                        color: $darkpig;
+                        text-transform: uppercase;
+                        letter-spacing: .02rem;
+                    }
+    
+                    input[type=submit] {
+                        text-decoration: none;
+                        background: $orange;
+                        color: #fff;
+                        padding: 1.5rem;
+                        border: 1px solid $orange;
+                        margin-top: 1.5rem;
+                        border-radius: 6px;
+                        font-weight: 700;
+                        text-align: center;
+                        text-transform: uppercase;
+                        letter-spacing: .15rem;
+                        transition: all .3s ease;
+            
+                        &:hover {
+                            border: 1px solid $orange;
+                            background: #fff;
+                            color: $orange;
+                            cursor: pointer;
+                        }
+                    }
+    
+    
+                }
+    
+            }
+    
+        }
+    }
+    
+
+}

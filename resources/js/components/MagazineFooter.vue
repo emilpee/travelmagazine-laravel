@@ -127,4 +127,18 @@
         margin: 0;
     }
 
+@media screen and (max-width: 400px) {
+
+    .foot {
+        margin:0;
+        display: flex;
+        flex-direction: column;
+        background: #FFA7A7;
+        max-width: 100vw;
+        width: 100%;
+    }
+
+
+
+}
 </style>

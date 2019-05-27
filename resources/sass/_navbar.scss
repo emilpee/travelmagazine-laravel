@@ -1,0 +1,107 @@
+
+html { 
+  
+    body {
+        
+        #app {
+                
+            .navbar {
+                margin: 0;
+                display: flex;
+                flex-direction: row;
+                padding: 2rem 1rem;
+                font-size: 1.2rem;
+                background: $background;
+
+                .nav-btn {
+
+                    .navLink {
+                        margin: 0 1rem;
+                        text-transform: uppercase;
+
+                        &.loginBtn {
+                            border-left: 1px solid black;
+                            margin: 0 0 0 2rem;
+                            padding: 0 0 0 2rem;
+                            color: $darkpig;
+                        }
+
+                        &.registerBtn {
+                            color: $darkpig;
+                        }
+
+                        &:hover {
+                            color: $pig;
+                        }
+                    }
+                    
+                    .logo {
+                        font-family: 'Pattaya', sans-serif;
+                        font-size:3rem;
+                        padding: 1rem;
+                        &:hover {
+                            color: $pig;
+                        }
+                    }
+                }
+            }       
+        }
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+
+    html { 
+  
+        body {
+            
+            #app {
+                    
+                .navbar {
+                    flex-direction: column;                    
+                    padding: 2rem 1rem;
+                    font-size: 1.2rem;
+                    background: $background;
+                    margin: .4rem;
+
+                    .nav-btn {
+
+                        .navLink {
+                            margin: 0 5rem;
+                            text-transform: uppercase;
+    
+                            &.loginBtn {
+                                border-left: 1px solid black;
+                                
+                                padding: 0 0 0 2rem;
+                                color: $darkpig;
+                                margin: 0 5rem;
+                            }
+    
+                            &.registerBtn {
+                                color: $darkpig;
+                            }
+    
+                            &:hover {
+                                color: $pig;
+                            }
+                        }
+                        
+                        .logo {
+                            font-family: 'Pattaya', sans-serif;
+                            font-size:3rem;
+                            padding: 1rem;
+                            margin: 0 4rem;
+                            &:hover {
+                                color: $pig;
+                            }
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+}
