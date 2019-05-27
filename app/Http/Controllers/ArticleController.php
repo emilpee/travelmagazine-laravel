@@ -32,6 +32,11 @@ class ArticleController extends Controller
         ->get();
         $ads = DB::table('ads')
         ->where('format', '=', 1)
+        ->limit(3)
+        ->get();
+        $bigads = DB::table('ads')
+        ->where('format', '=', 2)
+        ->limit(1)
         ->get();
         $mainArticle = DB::table('articles')
         ->where('prio', '=', 1)
@@ -53,6 +58,7 @@ class ArticleController extends Controller
             'thirdArticle' =>  $thirdArticle,
             'thirdChosenArticle' =>  $thirdChosenArticle,
             'ads' => $ads,
+            'bigads' => $bigads,
             'categories' => $categories
         ]);
     }

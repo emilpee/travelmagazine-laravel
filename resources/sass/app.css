@@ -152,7 +152,6 @@ html body #app .wrapper .mainimg {
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: mimg;
-  background: lightblue;
   overflow: hidden;
 }
 
@@ -323,8 +322,9 @@ html body #app .wrapper .big {
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: big;
-  background: blue;
   margin-top: 2rem;
+  background-size: cover;
+  height: 100%;
 }
 
 html body #app .wrapper .cat {
