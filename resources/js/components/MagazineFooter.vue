@@ -21,7 +21,10 @@
         <section>
             <h3>Follow Us</h3>
             <ul>
-                <li>Facebook</li>
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png">
+                    Facebook
+                </li>
                 <li>Instagram</li>
                 <li>Twitter</li>
             </ul>
@@ -30,7 +33,6 @@
 </template>
 
 <style scoped>
-    
 
     .foot {
         margin:0;
@@ -48,14 +50,17 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        border-left: 1px solid black;
     }
 
     h3 {
-        font-weight: normal;
-        padding: 0 !important;
+        font-size: 1.6em;
     }
-    p {
+
+
+    p, li {
         margin: 0;
+        line-height: 1.7em;
     }
 
     #submit {
@@ -64,6 +69,7 @@
         border: rgb(80, 79, 79) 1px solid;
 
     }
+
     #submit:hover {
         background: rgb(65, 59, 59);  
     }
@@ -72,14 +78,18 @@
         display: none;
     }
 
+    .checkbox {
+        padding: 1rem 0;
+    }
+
     .checkbox label::before{
-    content: "";
-    background: white;
-    display: inline-block;
-    height: 16px;
-    width: 16px;
-    border: 1px solid;
-    margin: 0 .6rem  0 0;
+        content: "";
+        background: white;
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        border: 1px solid;
+        margin: 0 .6rem  0 0;
     }
     .checkbox label::after {
         background: #FFA7A7;
@@ -87,13 +97,17 @@
     .contact {
         border-left: 1px solid black;
         border-right: 1px solid black;
-        
     }
-    h3 {
-        padding: 2rem;
-    }
+/*     h3 {
+        font-weight: 700;
+    } */
     ul {
         list-style: none;
         padding: 0;
     }
+
+    img {
+        width: 2rem;
+    }
+
 </style>

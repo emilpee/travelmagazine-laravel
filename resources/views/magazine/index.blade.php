@@ -17,23 +17,13 @@
             </a>
         </div>
     @endforeach
-        
-    
-
-       <div class="search">
-           <input type="text">
-           
-       </div>
-       <div class="searchbtn">
-            <input type="submit">
-       </div>
 
     <div class="grid">
     @foreach ($secondArticle as $article)
     <article class="griditem">
-        <a href="{{ route ('show',  $article->article_id) }}">
+        <a href="{{ route ('show', $article->article_id) }}">
             <section>
-                <img src="{{$article->img_url}}" style="width:100%;" alt="">
+                <img src="{{$article->img_url}}" alt="">
             </section>
             <section class="text">
                 <h1>{{$article->title}}</h1>
@@ -84,7 +74,7 @@
 
        <div class="categories">
        @foreach ($categories as $category)
-           <a class="catimg" href="#">
+           <a class="catimg" href="{{ route ('categories.show',  $category->category_id) }}">
                <div class="img" style="background-image: url({{$category->img_url}});">
                     <div class="box">
                         <h4>{{$category->name}}</h4>
