@@ -414,12 +414,19 @@ body {
 
         /* Single article */
         .singleArticle {
-            background: white;
+            
             display: flex;
             justify-content: center;
-            padding: 5rem;
-            margin: 4rem;
+            
             flex-direction: column;
+
+            .second {
+                padding: 5rem;
+                margin: 4rem;
+                background: white;
+                display: flex;
+                flex-direction: column;
+            
 
             img {
                 margin: 0 auto;
@@ -458,6 +465,7 @@ body {
                     font-style: italic;
                 }
             }
+        }
 
 
             .editLink {

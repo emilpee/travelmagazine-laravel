@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 @import url("https://fonts.googleapis.com/css?family=Pattaya&display=swap");
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap");
-html body #app .wrapper .mainheader, html body #app .wrapper .tag, html body #app .wrapper .big, html body #app .sgrid .pagination .page-item, html body #app .sgrid .ad, html body .singleArticle .jumbotron, html body .singleArticle h3, html body .card form {
+html body #app .wrapper .mainheader, html body #app .wrapper .tag, html body #app .wrapper .big, html body #app .sgrid .pagination .page-item, html body #app .sgrid .ad, html body .singleArticle .second .jumbotron, html body .singleArticle .second h3, html body .card form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,7 +144,7 @@ html body #app .wrapper {
       grid-template-columns: repeat(7, 1fr);
   -ms-grid-rows: 32rem 2.4rem 11.6rem 76rem 36rem 19.4rem 12rem 20rem;
       grid-template-rows: 32rem 2.4rem 11.6rem 76rem 36rem 19.4rem 12rem 20rem;
-      grid-template-areas: "mimg mimg mimg mimg mimg mimg mimg" ". . . tag . . . " ". mhead mhead mhead mhead mhead ." "agrid agrid agrid agrid agrid agrid ad" "flex flex flex flex flex flex flex" "big big big big big big big" "cat cat cat cat cat cat cat" "catego catego catego catego catego catego catego";
+      grid-template-areas: "mimg mimg mimg mimg mimg mimg mimg" ". . . tag . . . " ". mhead mhead mhead mhead mhead ." "agrid agrid agrid agrid agrid agrid ad" "flex flex flex flex flex flex flex" "big big big big big big big" "cat cat cat cat cat cat cat" "catego catego catego catego catego catego catego";
 }
 
 html body #app .wrapper .mainimg {
@@ -546,37 +546,47 @@ html body #app .sgrid .ad img {
 }
 
 html body .singleArticle {
-  background: #eee;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5rem;
-  margin: 4rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 
-html body .singleArticle img {
+html body .singleArticle .second {
+  padding: 5rem;
+  margin: 4rem;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+html body .singleArticle .second img {
   margin: 0 auto;
 }
 
-html body .singleArticle p {
+html body .singleArticle .second p {
   line-height: 1.8em;
   padding: 0 3rem 0 0;
 }
 
-html body .singleArticle .randompic {
+html body .singleArticle .second .randompic {
   margin: auto;
   padding: 1rem;
   height: auto;
 }
 
-html body .singleArticle .byline {
+html body .singleArticle .second .byline {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -589,7 +599,7 @@ html body .singleArticle .byline {
   padding: 1rem 0;
 }
 
-html body .singleArticle .byline small {
+html body .singleArticle .second .byline small {
   text-align: right;
   font-style: italic;
 }
@@ -627,7 +637,7 @@ html body form {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-gap: 15px;
-      grid-template-areas: "prio img cat" "author author author" "title title title" "lead lead lead" "body body body" ". submit .";
+      grid-template-areas: "prio img cat" "author author author" "title title title" "lead lead lead" "body body body" ". submit .";
 }
 
 html body form .form-group {
