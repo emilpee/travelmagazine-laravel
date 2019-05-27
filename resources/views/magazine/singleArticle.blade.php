@@ -26,6 +26,7 @@
 
 <!-- Show only if you are not logged in at the bottom of the page -->
 @if (Route::has('login'))
+
     <div class="lock">
         @auth 
             
