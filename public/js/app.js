@@ -6211,7 +6211,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.foot[data-v-f3280c0c] {\n    margin:0;\n    display: flex;\n    flex-direction: row;\n    background: #FFA7A7;\n    max-width: 100vw;\n    width: 100%;\n}\nsection[data-v-f3280c0c] {\n    flex: 1;\n    text-align: left;\n    padding: 1rem;\n    display: flex;\n    align-items: center;\n    flex-direction: column;\n}\nh3[data-v-f3280c0c] {\n    font-weight: normal;\n    padding: 0 !important;\n}\np[data-v-f3280c0c] {\n    margin: 0;\n}\n#submit[data-v-f3280c0c] {\n    color: grey;\n    text-decoration: none;\n    border: rgb(80, 79, 79) 1px solid;\n}\n#submit[data-v-f3280c0c]:hover {\n    background: rgb(65, 59, 59);\n}\n#checkbox_news[data-v-f3280c0c]{\n    display: none;\n}\n.checkbox label[data-v-f3280c0c]::before{\ncontent: \"\";\nbackground: white;\ndisplay: inline-block;\nheight: 16px;\nwidth: 16px;\nborder: 1px solid;\nmargin: 0 .6rem  0 0;\n}\n.checkbox label[data-v-f3280c0c]::after {\n    background: #FFA7A7;\n}\n.contact[data-v-f3280c0c] {\n    border-left: 1px solid black;\n    border-right: 1px solid black;\n}\nh3[data-v-f3280c0c] {\n    padding: 2rem;\n}\nul[data-v-f3280c0c] {\n    list-style: none;\n    padding: 0;\n}\n", ""]);
+exports.push([module.i, "\n.foot[data-v-f3280c0c] {\n        margin:0;\n        display: flex;\n        flex-direction: row;\n        background: #FFA7A7;\n        max-width: 100vw;\n        width: 100%;\n}\nsection[data-v-f3280c0c] {\n        flex: 1;\n        text-align: left;\n        padding: 1rem;\n        display: flex;\n        align-items: center;\n        flex-direction: column;\n        border-left: 1px solid black;\n}\nh3[data-v-f3280c0c] {\n        font-size: 1.6em;\n}\np[data-v-f3280c0c], li[data-v-f3280c0c] {\n        margin: 0;\n        line-height: 1.7em;\n}\n#submit[data-v-f3280c0c] {\n        color: grey;\n        text-decoration: none;\n        border: rgb(80, 79, 79) 1px solid;\n}\n#submit[data-v-f3280c0c]:hover {\n        background: rgb(65, 59, 59);\n}\n#checkbox_news[data-v-f3280c0c]{\n        display: none;\n}\n.checkbox[data-v-f3280c0c] {\n        padding: 1rem 0;\n}\n.checkbox label[data-v-f3280c0c]::before{\n        content: \"\";\n        background: white;\n        display: inline-block;\n        height: 16px;\n        width: 16px;\n        border: 1px solid;\n        margin: 0 .6rem  0 0;\n}\n.checkbox label[data-v-f3280c0c]::after {\n        background: #FFA7A7;\n}\n.contact[data-v-f3280c0c] {\n        border-left: 1px solid black;\n        border-right: 1px solid black;\n}\n/*     h3 {\n        font-weight: 700;\n    } */\nul[data-v-f3280c0c] {\n        list-style: none;\n        padding: 0;\n}\nimg[data-v-f3280c0c] {\n        width: 2rem;\n}\n\n", ""]);
 
 // exports
 
@@ -37742,7 +37742,15 @@ var staticRenderFns = [
         _c("h3", [_vm._v("Follow Us")]),
         _vm._v(" "),
         _c("ul", [
-          _c("li", [_vm._v("Facebook")]),
+          _c("li", [
+            _c("img", {
+              attrs: {
+                src:
+                  "https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png"
+              }
+            }),
+            _vm._v("\n                Facebook\n            ")
+          ]),
           _vm._v(" "),
           _c("li", [_vm._v("Instagram")]),
           _vm._v(" "),
@@ -52784,8 +52792,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\Travelmagazine\travelmagazine-laravel\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\Travelmagazine\travelmagazine-laravel\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Applications/MAMP/htdocs/travelmagazine-laravel/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Applications/MAMP/htdocs/travelmagazine-laravel/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

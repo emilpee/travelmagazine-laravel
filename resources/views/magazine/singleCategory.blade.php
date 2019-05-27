@@ -13,21 +13,19 @@
 <div class="second">
     @foreach ($category->articles as $article)
     <article class="griditem">
-            <a href="{{ route('show', $article->article_id) }}">
-                    <section class="img">
-                        <img src="{{$article->img_url}}" alt="Archive picture" style="width: 100%">
-                    </section>
-                    <section class="text1">
-                        <h2> {{$article->title}} </h2> 
-                    </section>
-                    <section class="text2">
-                        <h3> {{$article->lead}} </h3>
-                    </section> 
-                </a>
-            </article>
+        <a href="{{ route('show', $article->article_id) }}">
+            <section class="img">
+                <img src="{{$article->img_url}}" alt="Archive picture">
+            </section>
+            <section class="text1">
+                <h2> {{$article->title}} </h2> 
+            </section>
+            <section class="text2">
+                <h3> {{$article->lead}} </h3>
+            </section> 
+        </a>
+    </article>
     @endforeach
-
-
 
 </div>
 

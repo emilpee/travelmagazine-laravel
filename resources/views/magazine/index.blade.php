@@ -18,13 +18,6 @@
         </div>
     @endforeach           
 
-       <div class="search">
-           <input type="text">
-       </div>
-       <div class="searchbtn">
-            <input type="submit">
-       </div>
-
     <div class="grid">
         @foreach ($secondArticle as $article)
             <article class="griditem">
@@ -81,7 +74,7 @@
 
        <div class="categories">
        @foreach ($categories as $category)
-           <a class="catimg" href="#">
+           <a class="catimg" href="{{ route ('categories.show',  $category->category_id) }}">
                <div class="img" style="background-image: url({{$category->img_url}});">
                     <div class="box">
                         <h4>{{$category->name}}</h4>

@@ -142,9 +142,9 @@ html body #app .wrapper {
   display: grid;
   -ms-grid-columns: (1fr)[7];
       grid-template-columns: repeat(7, 1fr);
-  -ms-grid-rows: 32rem 2.4rem 11.6rem 4.8rem 68rem 36rem 19.4rem 12rem 20rem;
-      grid-template-rows: 32rem 2.4rem 11.6rem 4.8rem 68rem 36rem 19.4rem 12rem 20rem;
-      grid-template-areas: "mimg mimg mimg mimg mimg mimg mimg" ". . . tag . . . " ". mhead mhead mhead mhead mhead ." "search search search search search searchbtn ad" "agrid agrid agrid agrid agrid agrid ad" "flex flex flex flex flex flex flex" "big big big big big big big" "cat cat cat cat cat cat cat" "catego catego catego catego catego catego catego";
+  -ms-grid-rows: 32rem 2.4rem 11.6rem 68rem 36rem 16rem 12rem 20rem;
+      grid-template-rows: 32rem 2.4rem 11.6rem 68rem 36rem 16rem 12rem 20rem;
+      grid-template-areas: "mimg mimg mimg mimg mimg mimg mimg" ". . . tag . . . " ". mhead mhead mhead mhead mhead ad" "agrid agrid agrid agrid agrid agrid ad" "flex flex flex flex flex flex flex" "big big big big big big big" "cat cat cat cat cat cat cat" "catego catego catego catego catego catego catego";
 }
 
 html body #app .wrapper .mainimg {
@@ -196,38 +196,8 @@ html body #app .wrapper .tag h2 {
   text-transform: uppercase;
 }
 
-html body #app .wrapper .search {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
-  grid-area: search;
-  background: white;
-  margin-bottom: 1.4rem;
-}
-
-html body #app .wrapper .search input[type=text] {
-  font-size: .7rem;
-  width: 100%;
-  border: none;
-}
-
-html body #app .wrapper .searchbtn {
-  -ms-grid-row: 4;
-  -ms-grid-column: 6;
-  grid-area: searchbtn;
-  background: white;
-  margin-bottom: 1.4rem;
-  margin-right: 1.5rem;
-}
-
-html body #app .wrapper .searchbtn input[type=submit] {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
 html body #app .wrapper .grid {
-  -ms-grid-row: 5;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 6;
   grid-area: agrid;
@@ -282,7 +252,7 @@ html body #app .wrapper .grid .griditem .text {
 }
 
 html body #app .wrapper .ad {
-  -ms-grid-row: 4;
+  -ms-grid-row: 3;
   -ms-grid-row-span: 2;
   -ms-grid-column: 7;
   grid-area: ad;
@@ -297,7 +267,7 @@ html body #app .wrapper .ad img {
 
 html body #app .wrapper .flex {
   margin: 1rem 0;
-  -ms-grid-row: 6;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: flex;
@@ -348,7 +318,7 @@ html body #app .wrapper .flex .list ul li {
 }
 
 html body #app .wrapper .big {
-  -ms-grid-row: 7;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: big;
@@ -373,7 +343,7 @@ html body #app .wrapper .cat {
 }
 
 html body #app .wrapper .categories {
-  -ms-grid-row: 9;
+  -ms-grid-row: 8;
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-area: catego;
@@ -546,6 +516,10 @@ html .singleArticle {
           flex-direction: column;
 }
 
+html .singleArticle img {
+  margin: 0 auto;
+}
+
 html .singleArticle p {
   line-height: 1.8em;
   padding: 0 3rem 0 0;
@@ -608,7 +582,7 @@ html form {
   -ms-grid-rows: auto;
       grid-template-rows: auto;
   grid-gap: 15px;
-      grid-template-areas: "prio img cat" "author author author" "title title title" "lead lead lead" "body body body" ". submit .";
+      grid-template-areas: "prio img cat" "author author author" "title title title" "lead lead lead" "body body body" ". submit .";
 }
 
 html form .form-group {
