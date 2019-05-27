@@ -418,9 +418,15 @@ body {
             background: #eee;
             display: flex;
             justify-content: center;
-            padding: 5rem;
-            margin: 4rem;
+ 
             flex-direction: column;
+            .single{
+                padding: 5rem;
+                margin: 4rem;
+                background: white;
+                display: flex;
+                flex-direction: column;
+                
 
             img {
                 margin: 0 auto;
@@ -458,6 +464,7 @@ body {
                     text-align: right;
                     font-style: italic;
                 }
+            }
             }
 
 

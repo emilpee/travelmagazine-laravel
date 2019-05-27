@@ -3,6 +3,7 @@
 @section('main')
  
     <div class="singleArticle">
+        <div class="single">
         <img src="{{$article->img_url}}" alt="Archive picture">
         <h1 class="jumbotron">{{$article->title}}</h1>
         <h3>{{$article->lead}}</h3>
@@ -45,6 +46,7 @@
 
     <div class="big">
             
+    </div>
     </div>
 
 @endsection

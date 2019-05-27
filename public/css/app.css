@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@import url(https://fonts.googleapis.com/css?family=Pattaya&display=swap);@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap);@charset "UTF-8";
 
 html body .card form,
-html body .singleArticle h3,
-html body .singleArticle .jumbotron,
+html body .singleArticle .single h3,
+html body .singleArticle .single .jumbotron,
 html body #app .sgrid .ad,
 html body #app .sgrid .pagination .page-item,
 html body #app .wrapper .big,
@@ -419,27 +419,33 @@ html body .singleArticle {
   background: #eee;
   display: flex;
   justify-content: center;
-  padding: 5rem;
-  margin: 4rem;
   flex-direction: column;
 }
 
-html body .singleArticle img {
+html body .singleArticle .single {
+  padding: 5rem;
+  margin: 4rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+html body .singleArticle .single img {
   margin: 0 auto;
 }
 
-html body .singleArticle p {
+html body .singleArticle .single p {
   line-height: 1.8em;
   padding: 0 3rem 0 0;
 }
 
-html body .singleArticle .randompic {
+html body .singleArticle .single .randompic {
   margin: auto;
   padding: 1rem;
   height: auto;
 }
 
-html body .singleArticle .byline {
+html body .singleArticle .single .byline {
   display: flex;
   margin-top: 1.5rem;
   justify-content: space-between;
@@ -448,7 +454,7 @@ html body .singleArticle .byline {
   padding: 1rem 0;
 }
 
-html body .singleArticle .byline small {
+html body .singleArticle .single .byline small {
   text-align: right;
   font-style: italic;
 }
