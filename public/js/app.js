@@ -6211,7 +6211,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.foot[data-v-f3280c0c] {\n        margin:0;\n        display: flex;\n        flex-direction: row;\n        background: #FFA7A7;\n        max-width: 100vw;\n        width: 100%;\n}\nsection[data-v-f3280c0c] {\n        flex: 1;\n        text-align: left;\n        padding: 1rem;\n        display: flex;\n        align-items: center;\n        flex-direction: column;\n        border-left: 1px solid black;\n}\nh3[data-v-f3280c0c] {\n        font-size: 1.6em;\n}\np[data-v-f3280c0c], li[data-v-f3280c0c] {\n        margin: 0;\n        line-height: 1.7em;\n}\n#submit[data-v-f3280c0c] {\n        color: grey;\n        text-decoration: none;\n        border: rgb(80, 79, 79) 1px solid;\n}\n#submit[data-v-f3280c0c]:hover {\n        background: rgb(65, 59, 59);\n}\n#checkbox_news[data-v-f3280c0c]{\n        display: none;\n}\n.checkbox[data-v-f3280c0c] {\n        padding: 1rem 0;\n}\n.checkbox label[data-v-f3280c0c]::before{\n        content: \"\";\n        background: white;\n        display: inline-block;\n        height: 16px;\n        width: 16px;\n        border: 1px solid;\n        margin: 0 .6rem  0 0;\n}\n.checkbox label[data-v-f3280c0c]::after {\n        background: #FFA7A7;\n}\n.contact[data-v-f3280c0c] {\n        border-left: 1px solid black;\n        border-right: 1px solid black;\n}\n/*     h3 {\n        font-weight: 700;\n    } */\nul[data-v-f3280c0c] {\n        list-style: none;\n        padding: 0;\n}\nimg[data-v-f3280c0c] {\n        width: 2rem;\n}\n\n", ""]);
+exports.push([module.i, "\n.foot[data-v-f3280c0c] {\n        margin:0;\n        display: flex;\n        flex-direction: row;\n        background: #FFA7A7;\n        max-width: 100vw;\n        width: 100%;\n}\nimg[data-v-f3280c0c] {\n        width: 15px !important;\n}\nsection[data-v-f3280c0c] {\n        flex: 1;\n        text-align: left;\n        padding: 1rem;\n        display: flex;\n        align-items: center;\n        flex-direction: column;\n        border-left: 1px solid rgba(0, 0, 0, .3);\n}\nh3[data-v-f3280c0c] {\n        font-size: 1.6em;\n}\np[data-v-f3280c0c], li[data-v-f3280c0c] {\n        margin: 0;\n        line-height: 1.7em;\n}\nli[data-v-f3280c0c] {\n        padding: .25rem 0;\n}\n#submit[data-v-f3280c0c] {\n        color: grey;\n        text-decoration: none;\n        border: rgb(80, 79, 79) 1px solid;\n}\n#submit[data-v-f3280c0c]:hover {\n        background: rgb(65, 59, 59);\n}\n#checkbox_news[data-v-f3280c0c]{\n        display: none;\n}\n.checkbox[data-v-f3280c0c] {\n        padding: 1rem 0;\n}\n.checkbox label[data-v-f3280c0c]::before{\n        content: \"\";\n        background: white;\n        display: inline-block;\n        height: 16px;\n        width: 16px;\n        border: 1px solid;\n        margin: 0 .6rem  0 0;\n}\n.checkbox label[data-v-f3280c0c]::after {\n        background: #FFA7A7;\n}\n.contact[data-v-f3280c0c] {\n        border-left: 1px solid black;\n        border-right: 1px solid black;\n}\n/*     h3 {\n        font-weight: 700;\n    } */\nul[data-v-f3280c0c] {\n        list-style: none;\n        padding: 0;\n        margin: 0;\n}\n\n", ""]);
 
 // exports
 
@@ -37743,18 +37743,42 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("ul", [
           _c("li", [
-            _c("img", {
-              attrs: {
-                src:
-                  "https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png"
-              }
-            }),
-            _vm._v("\n                Facebook\n            ")
+            _c("a", { attrs: { href: "http://www.facebook.com" } }, [
+              _c("img", {
+                attrs: {
+                  src:
+                    "https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png",
+                  alt: "Visit us on Facebook"
+                }
+              }),
+              _vm._v("\n                    Facebook\n                ")
+            ])
           ]),
           _vm._v(" "),
-          _c("li", [_vm._v("Instagram")]),
+          _c("li", [
+            _c("a", { attrs: { href: "http://www.instagram.com" } }, [
+              _c("img", {
+                attrs: {
+                  src: "http://pngimg.com/uploads/instagram/instagram_PNG9.png",
+                  alt: "Visit us on Instagram"
+                }
+              }),
+              _vm._v("\n                    Instagram\n                ")
+            ])
+          ]),
           _vm._v(" "),
-          _c("li", [_vm._v("Twitter")])
+          _c("li", [
+            _c("a", { attrs: { href: "http://www.twitter.com" } }, [
+              _c("img", {
+                attrs: {
+                  src:
+                    "https://1000logos.net/wp-content/uploads/2017/06/Twitter-Logo.png",
+                  alt: "Visit us on Twitter"
+                }
+              }),
+              _vm._v("\n                    Twitter\n                ")
+            ])
+          ])
         ])
       ])
     ])

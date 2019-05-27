@@ -63,10 +63,11 @@
                     
        </div>
 
-       @foreach ($bigads as $ad)
-        <div class="big"  style="background-image: url({{$ad->img_url}});">            
+      @foreach ($bigads as $ad)
+        <div class="big">
+            <img src="{{$ad->img_url}}" alt="Go to ad" />     
         </div>
-        @endforeach
+      @endforeach
 
        <div class="cat">
         <h2>CATEGORIES</h2>
