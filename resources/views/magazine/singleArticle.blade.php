@@ -16,6 +16,7 @@
             <strong>{{$article->author}}</strong>
             <small>Last updated: {{$article->updated_at}}</small>
         </div>
+        
         @can('superUsers-only')
         <a class="editLink" href="{{ route('edit', $article->article_id) }}">Edit</a>
         @endcan
@@ -29,12 +30,13 @@
         @auth 
             
         @else
-                <span>Want to read more? Then please either </span>
-                <a href="{{ route('login') }}">Login</a>
-            @if (Route::has('register'))
-                <span>or if you don't have an account, please </span>
-                <a href="{{ route('register') }}">Register</a>.
-            @endif
+        <img src="../resources/img/lock.png" alt="Login please">
+            <span>Want to read more?</span>
+            <a href="{{ route('login') }}">Login</a>
+        @if (Route::has('register'))
+            <span> or if you don't have an account, please </span>
+            <a href="{{ route('register') }}">Register</a>
+        @endif
 
         @endauth
     </div>

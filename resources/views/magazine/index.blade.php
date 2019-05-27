@@ -11,35 +11,26 @@
             <h2>Go Europe</h2>
         </div>
         <div class="mainheader">
-     
-            <h1>{{$article->title}}</h1>
-            <h3>{{$article->lead}}</h3>
+            <a href="{{ route ('show',  $article->article_id) }}">
+                <h1>{{$article->title}}</h1>
+                <h3>{{$article->lead}}</h3>
+            </a>
         </div>
     @endforeach
-        
-    
-
-       <div class="search">
-           <input type="text">
-           
-       </div>
-       <div class="searchbtn">
-            <input type="submit">
-       </div>
 
     <div class="grid">
     @foreach ($secondArticle as $article)
-    <a href="{{ route ('show',  $article->article_id) }}">
-        <article class="griditem">
+    <article class="griditem">
+        <a href="{{ route ('show', $article->article_id) }}">
             <section>
-                <img src="{{$article->img_url}}" style="width:100%;" alt="">
+                <img src="{{$article->img_url}}" alt="">
             </section>
             <section class="text">
                 <h1>{{$article->title}}</h1>
                 <p>{{$article->lead}}</p>
             </section>
-        </article>
-    </a>                
+        </a>                
+    </article>
     @endforeach
     </div>
 
@@ -83,10 +74,12 @@
 
        <div class="categories">
        @foreach ($categories as $category)
-           <a class="catimg" href="#">
+           <a class="catimg" href="{{ route ('categories.show',  $category->category_id) }}">
                <div class="img" style="background-image: url({{$category->img_url}});">
-                   <h4>{{$category->name}}</h4>
-                   <p>{{$category->text}}</p>
+                    <div class="box">
+                        <h4>{{$category->name}}</h4>
+                        <p>{{$category->text}}</p>
+                    </div>
                </div>
            </a>
         @endforeach

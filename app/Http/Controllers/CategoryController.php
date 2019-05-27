@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Article;
+use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
@@ -16,7 +17,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('magazine.categories', [
+        return view('magazine.layout', [
             'categories' => $categories
         ]);
     }
@@ -50,9 +51,13 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
+        $categories = Category::all();
         $category = Category::findOrFail($id);
+        $articles = Category::with('articles')->paginate(8);
         return view('magazine.singleCategory', [
-            'category' => $category
+            'category' => $category,
+            'categories' => $categories,
+            'articles' => $articles
         ]);
     }
 
