@@ -125,8 +125,8 @@ html body #app .wrapper {
   margin: 0 3rem;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: 32rem 2.4rem 11.6rem 4.8rem 68rem 36rem 19.4rem 12rem 20rem;
-  grid-template-areas: "mimg mimg mimg mimg mimg mimg mimg" ". . . tag . . . " ". mhead mhead mhead mhead mhead ." "search search search search search searchbtn ad" "agrid agrid agrid agrid agrid agrid ad" "flex flex flex flex flex flex flex" "big big big big big big big" "cat cat cat cat cat cat cat" "catego catego catego catego catego catego catego";
+  grid-template-rows: 32rem 2.4rem 11.6rem 68rem 36rem 19.4rem 12rem 20rem;
+  grid-template-areas: "mimg mimg mimg mimg mimg mimg mimg" ". . . tag . . . " ". mhead mhead mhead mhead mhead ." "agrid agrid agrid agrid agrid agrid ad" "flex flex flex flex flex flex flex" "big big big big big big big" "cat cat cat cat cat cat cat" "catego catego catego catego catego catego catego";
 }
 
 html body #app .wrapper .mainimg {
@@ -199,13 +199,14 @@ html body #app .wrapper .grid .griditem .text {
 
 html body #app .wrapper .ad {
   grid-area: ad;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 html body #app .wrapper .ad img {
   max-width: 14vw;
   min-width: 14vw;
   width: 100%;
+  margin-bottom: 0.7rem;
 }
 
 html body #app .wrapper .flex {
@@ -282,8 +283,8 @@ html body #app .wrapper .categories .catimg .img {
 }
 
 html body #app .wrapper .categories .catimg .img .box {
-  background: rgba(82, 80, 80, 0.719);
   padding: 1rem;
+  background: rgba(82, 80, 80, 0.719);
 }
 
 html body #app .wrapper .categories .catimg .img .box h4 {

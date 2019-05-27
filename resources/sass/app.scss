@@ -1,4 +1,4 @@
-    // Fonts
+// Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Pattaya&display=swap');
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap");
@@ -264,41 +264,42 @@ body {
                         width: 3rem;
                         margin-right: 1rem;
 
-                        .img{
+                        .img {
                             background-size: cover; 
                             height: 100%;
                             display: flex;
                             flex-direction: column;
                             justify-content: flex-end;
-
-                            .box{
-                                background: rgba(82, 80, 80, 0.719);
+                            
+                            .box {
                                 padding: 1rem;
-                              
-                                h4{
-                                    margin:.4rem 0;
-                                    
+                                background: rgba(82, 80, 80, 0.719);
+                                                      
+                                h4 {
+                                    margin: .4rem 0;
                                     color: white;
-                                                                   
-                                }
-                                p{
+                                } 
+
+                                p {
                                     font-size: .8rem;
                                     color:white;
-                                    
                                     margin: .6rem 0;                                
                                     display: none;
                                 }                       
+
                             }
+
                             &:hover {
                                 background: rgba(82, 80, 80, 0.719);
+
                                 .box {
                                     padding: 1rem;
-
+                                    
                                     p {
                                         display: unset;
-                                        
                                     }
                                 }
+                                
                             }
                             
                         }
