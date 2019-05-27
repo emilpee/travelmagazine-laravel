@@ -12,7 +12,7 @@ $factory->define(Article::class, function (Faker $faker) {
         'img_url' => $faker->imageUrl($width = 640, $height = 480),
         'author' => $faker->name(),
         'title' => $faker->sentence($nbWords = 6, $variableNbWords = true),
-        'lead' => $faker->text($maxNbChars = 100),
+        'lead' => $faker->text($maxNbChars = 191),
         'bodytext' => $faker->paragraph($nbSentences = 100, $variableNbSentences = true),
         'created_at'=> $faker->dateTimeBetween($startDate = '-30 years', $endDate = '-2 years', $timezone = null),
         'updated_at'=> $faker->dateTimeBetween($startDate = '-2 years', $endDate = 'now', $timezone = null)
