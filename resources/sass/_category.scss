@@ -135,7 +135,7 @@ html {
 
                         .page-item {
                             border: 1px solid rgba(0, 0, 0, .6);
-                            @extend %center;
+                            
                             transition: all .3s ease-in-out;
                             padding: .4rem;
                             cursor: pointer;
@@ -145,6 +145,7 @@ html {
                                 margin: 0 .4rem;
                             }
 
+                            //
                             .page-link {
                                 padding: .5rem;
                             }
@@ -208,7 +209,7 @@ html {
 
                     .ad {
                         grid-area: ad; 
-                        @extend %center;
+                        
                         
                         img {
                             width: 100vw;

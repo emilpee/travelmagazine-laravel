@@ -93,14 +93,6 @@ html {
                     padding: 0;
                 }
     
-                .jumbotron {
-                    @extend %center;
-                }
-    
-                h3 {
-                    @extend %center;
-                }
-    
                 p {
                     line-height: 1.8em;
                     padding: 0 1.3rem 0 0;
