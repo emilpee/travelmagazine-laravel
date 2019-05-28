@@ -1,0 +1,109 @@
+        
+        
+html { 
+  
+    body {
+        /* Single article */
+        .singleArticle {
+            background: #eee;
+            display: flex;
+            justify-content: center;
+            padding: 5rem;
+            margin: 4rem;
+            flex-direction: column;
+
+            img {
+                margin: 0 auto;
+            }
+
+            .jumbotron {
+                @extend %center;
+            }
+
+            h3 {
+                @extend %center;
+            }
+
+            p {
+                line-height: 1.8em;
+                padding: 0 3rem 0 0;
+            }
+
+            
+            .randompic {
+                margin: auto;
+                padding: 1rem;
+                height: auto;
+            }
+            
+            .byline {
+                display: flex;
+                margin-top: 1.5rem;
+                justify-content: space-between;
+                border-top: 1px solid black;
+                border-bottom: 1px solid black;
+                padding: 1rem 0;
+
+                small {
+                    text-align: right;
+                    font-style: italic;
+                }
+            }
+
+
+            .editLink {
+                text-decoration: none;
+                background: $orange;
+                color: #fff;
+                padding: 1.5rem;
+                border: 1px solid $orange;
+                margin-top: 1.5rem;
+                border-radius: 6px;
+                font-weight: 700;
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: .15rem;
+                transition: all .3s ease;
+
+                &:hover {
+                    border: 1px solid $orange;
+                    background: #fff;
+                    color: $orange;
+                }
+                  
+            }
+        }
+        
+    }
+}
+
+@media screen and (max-width: 400px) {    
+    html {   
+        body {
+            .singleArticle {
+                background: #eee;
+                display: flex;
+                justify-content: center;
+                padding: 1rem;
+                margin: 0rem;
+                flex-direction: column;
+    
+                img {
+                    margin: 0;
+                    padding: 0;
+                }
+    
+                p {
+                    line-height: 1.8em;
+                    padding: 0 1.3rem 0 0;
+                }    
+                
+                .randompic {
+                    margin: 0;
+                    padding: 0rem;
+                    height: auto;
+                }        
+            }
+        }
+    }
+}
