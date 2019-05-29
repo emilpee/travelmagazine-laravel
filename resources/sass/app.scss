@@ -17,55 +17,50 @@ html {
     width: 100%;
     padding: 0;
 
-body {
-    background: $background;
-    margin: 0;
+    body {
+        background: $background;
+        margin: 0;
 
-    #app {
+        #app {
 
-        img {
-            width: 100%;
-            max-width: 640px;
-        }
+            img {
+                width: 100%;
+                max-width: 640px;
+            }
 
-        div {
+            div {
+                
+                .lock {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 2rem;
+                    border: 1px solid black;
+                    border-radius: 4px;
+                    margin: 0 auto 2rem auto;
+                    line-height: 1.6em;
+                    width: 50%;
             
-            .lock {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 2rem;
-                border: 1px solid black;
-                border-radius: 4px;
-                margin: 0 auto 2rem auto;
-                line-height: 1.6em;
-                width: 50%;
-         
-                a {
-                    margin: 0 0 1rem 0;
-                    color: $darkpig;
-                }
+                    a {
+                        margin: 0 0 1rem 0;
+                        color: $darkpig;
+                    }
 
-                img {
-                    width: 200px;
+                    img {
+                        width: 200px;
+                    }
                 }
             }
-        }
-            background: white;
-            
-            flex-direction: column;
-
-            .second {
-            padding: 5rem;
-            margin: 4rem;
-                background: white;
-                display: flex;
-            flex-direction: column;
-
-
-        }
-
 
         } 
+    }
+}
+@media screen and (max-width: 415px) {
+    html {
+    margin:0;
+    max-width: 100vw;
+    min-width: 100vw;
+    width: 100%;
+    padding: 0;
     }
 }

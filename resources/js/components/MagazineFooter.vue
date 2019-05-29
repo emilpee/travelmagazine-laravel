@@ -118,16 +118,13 @@
         border-left: 1px solid black;
         border-right: 1px solid black;
     }
-/*     h3 {
-        font-weight: 700;
-    } */
     ul {
         list-style: none;
         padding: 0;
         margin: 0;
     }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 414px) {
 
     .foot {
         margin:0;

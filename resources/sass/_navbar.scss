@@ -50,7 +50,7 @@ html {
 }
 
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 415px) {
 
     html { 
   
@@ -59,11 +59,16 @@ html {
             #app {
                     
                 .navbar {
-                    flex-direction: column;                    
-                    padding: 2rem 1rem;
-                    font-size: 1.2rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;                 
+                    font-size: 1rem;
                     background: $background;
                     margin: .4rem;
+                    
+                    :first-child{
+                        padding: 2rem 1rem;
+                    }
 
                     .nav-btn {
 
@@ -73,7 +78,6 @@ html {
     
                             &.loginBtn {
                                 border-left: 1px solid black;
-                                
                                 padding: 0 0 0 2rem;
                                 color: $darkpig;
                                 margin: 0 5rem;

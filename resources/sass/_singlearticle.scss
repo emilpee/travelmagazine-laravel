@@ -5,15 +5,21 @@ html {
     body {
         /* Single article */
         .singleArticle {
-            background: #eee;
+            background: white;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             padding: 5rem;
             margin: 4rem;
-            flex-direction: column;
-
+            
+            .second {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+        
             img {
                 margin: 0 auto;
+                align-self: center;
             }
 
             .jumbotron {
@@ -76,12 +82,11 @@ html {
         
     }
 }
-
-@media screen and (max-width: 400px) {    
+}
+@media screen and (max-width: 415px) {    
     html {   
         body {
             .singleArticle {
-                background: #eee;
                 display: flex;
                 justify-content: center;
                 padding: 1rem;
