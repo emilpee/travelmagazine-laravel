@@ -4,6 +4,7 @@
     "sources": [
         "app.scss",
         "_variables.scss",
+        "_typography.scss"
         "_typography.scss",
         "_login.scss",
         "_edit.scss",
